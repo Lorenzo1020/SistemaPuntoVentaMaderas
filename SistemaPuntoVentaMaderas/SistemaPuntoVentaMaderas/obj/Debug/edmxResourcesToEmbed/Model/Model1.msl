@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container1">
+    <EntitySetMapping Name="UsuariosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Usuarios)">
+        <MappingFragment StoreEntitySet="UsuariosSet">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="App" ColumnName="App" />
+          <ScalarProperty Name="Apm" ColumnName="Apm" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPagoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.TipoPago)">
+        <MappingFragment StoreEntitySet="TipoPagoSet">
+          <ScalarProperty Name="IdTipoPago" ColumnName="IdTipoPago" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Clientes)">
+        <MappingFragment StoreEntitySet="ClientesSet">
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="App" ColumnName="App" />
+          <ScalarProperty Name="Apm" ColumnName="Apm" />
+          <ScalarProperty Name="NumCel" ColumnName="NumCel" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProveedoresSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Proveedores)">
+        <MappingFragment StoreEntitySet="ProveedoresSet">
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="App" ColumnName="App" />
+          <ScalarProperty Name="Apm" ColumnName="Apm" />
+          <ScalarProperty Name="NumCel" ColumnName="NumCel" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DireccionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Direccion)">
+        <MappingFragment StoreEntitySet="DireccionSet">
+          <ScalarProperty Name="IdDireccion" ColumnName="IdDireccion" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="NumExt" ColumnName="NumExt" />
+          <ScalarProperty Name="NumInt" ColumnName="NumInt" />
+          <ScalarProperty Name="Cp" ColumnName="Cp" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaderasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Maderas)">
+        <MappingFragment StoreEntitySet="MaderasSet">
+          <ScalarProperty Name="IdMadera" ColumnName="IdMadera" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="StockControl" ColumnName="StockControl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioVentaClienteSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.PrecioVentaCliente)">
+        <MappingFragment StoreEntitySet="PrecioVentaClienteSet">
+          <ScalarProperty Name="IdPrecioVcm" ColumnName="IdPrecioVcm" />
+          <ScalarProperty Name="PrecioMadera" ColumnName="PrecioMadera" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VentasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Ventas)">
+        <MappingFragment StoreEntitySet="VentasSet">
+          <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
+          <ScalarProperty Name="FechaVenta" ColumnName="FechaVenta" />
+          <ScalarProperty Name="TotalProducto" ColumnName="TotalProducto" />
+          <ScalarProperty Name="PrecioTotal" ColumnName="PrecioTotal" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="PagoCon" ColumnName="PagoCon" />
+          <ScalarProperty Name="Deuda" ColumnName="Deuda" />
+          <ScalarProperty Name="RealizoVenta" ColumnName="RealizoVenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleVentasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.DetalleVentas)">
+        <MappingFragment StoreEntitySet="DetalleVentasSet">
+          <ScalarProperty Name="IdDetalleVenta" ColumnName="IdDetalleVenta" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroAbonoClientesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.RegistroAbonoClientes)">
+        <MappingFragment StoreEntitySet="RegistroAbonoClientesSet">
+          <ScalarProperty Name="IdAbono" ColumnName="IdAbono" />
+          <ScalarProperty Name="FechaAbono" ColumnName="FechaAbono" />
+          <ScalarProperty Name="Debia" ColumnName="Debia" />
+          <ScalarProperty Name="Abono" ColumnName="Abono" />
+          <ScalarProperty Name="Debe" ColumnName="Debe" />
+          <ScalarProperty Name="RecibeAbono" ColumnName="RecibeAbono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComprasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Compras)">
+        <MappingFragment StoreEntitySet="ComprasSet">
+          <ScalarProperty Name="IdCompra" ColumnName="IdCompra" />
+          <ScalarProperty Name="FechaCompra" ColumnName="FechaCompra" />
+          <ScalarProperty Name="TotalProducto" ColumnName="TotalProducto" />
+          <ScalarProperty Name="PrecioTotal" ColumnName="PrecioTotal" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="PagoCon" ColumnName="PagoCon" />
+          <ScalarProperty Name="Deuda" ColumnName="Deuda" />
+          <ScalarProperty Name="RealizoCompra" ColumnName="RealizoCompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleComprasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.DetalleCompras)">
+        <MappingFragment StoreEntitySet="DetalleComprasSet">
+          <ScalarProperty Name="IdDetalleCompra" ColumnName="IdDetalleCompra" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioCompraProveedorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.PrecioCompraProveedor)">
+        <MappingFragment StoreEntitySet="PrecioCompraProveedorSet">
+          <ScalarProperty Name="IdPrecioCp" ColumnName="IdPrecioCp" />
+          <ScalarProperty Name="PrecioMadera" ColumnName="PrecioMadera" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroAbonoProveedorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.RegistroAbonoProveedor)">
+        <MappingFragment StoreEntitySet="RegistroAbonoProveedorSet">
+          <ScalarProperty Name="IdAbono" ColumnName="IdAbono" />
+          <ScalarProperty Name="FechaAbono" ColumnName="FechaAbono" />
+          <ScalarProperty Name="Debia" ColumnName="Debia" />
+          <ScalarProperty Name="Abono" ColumnName="Abono" />
+          <ScalarProperty Name="Debe" ColumnName="Debe" />
+          <ScalarProperty Name="RecibeAbono" ColumnName="RecibeAbono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="DireccionClientes" TypeName="Model1.DireccionClientes" StoreEntitySet="DireccionSet">
+      <EndProperty Name="Clientes">
+        <ScalarProperty Name="IdCliente" ColumnName="Clientes_IdCliente" />
+      </EndProperty>
+      <EndProperty Name="Direccion">
+        <ScalarProperty Name="IdDireccion" ColumnName="IdDireccion" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DireccionProveedores" TypeName="Model1.DireccionProveedores" StoreEntitySet="DireccionSet">
+      <EndProperty Name="Proveedores">
+        <ScalarProperty Name="IdProveedor" ColumnName="Proveedores_IdProveedor" />
+      </EndProperty>
+      <EndProperty Name="Direccion">
+        <ScalarProperty Name="IdDireccion" ColumnName="IdDireccion" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientesPrecioVentaCliente" TypeName="Model1.ClientesPrecioVentaCliente" StoreEntitySet="PrecioVentaClienteSet">
+      <EndProperty Name="Clientes">
+        <ScalarProperty Name="IdCliente" ColumnName="Clientes_IdCliente" />
+      </EndProperty>
+      <EndProperty Name="PrecioVentaCliente">
+        <ScalarProperty Name="IdPrecioVcm" ColumnName="IdPrecioVcm" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MaderasPrecioVentaCliente" TypeName="Model1.MaderasPrecioVentaCliente" StoreEntitySet="PrecioVentaClienteSet">
+      <EndProperty Name="Maderas">
+        <ScalarProperty Name="IdMadera" ColumnName="Maderas_IdMadera" />
+      </EndProperty>
+      <EndProperty Name="PrecioVentaCliente">
+        <ScalarProperty Name="IdPrecioVcm" ColumnName="IdPrecioVcm" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VentasDetalleVentas" TypeName="Model1.VentasDetalleVentas" StoreEntitySet="DetalleVentasSet">
+      <EndProperty Name="Ventas">
+        <ScalarProperty Name="IdVenta" ColumnName="Ventas_IdVenta" />
+      </EndProperty>
+      <EndProperty Name="DetalleVentas">
+        <ScalarProperty Name="IdDetalleVenta" ColumnName="IdDetalleVenta" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MaderasDetalleVentas" TypeName="Model1.MaderasDetalleVentas" StoreEntitySet="DetalleVentasSet">
+      <EndProperty Name="Maderas">
+        <ScalarProperty Name="IdMadera" ColumnName="Maderas_IdMadera" />
+      </EndProperty>
+      <EndProperty Name="DetalleVentas">
+        <ScalarProperty Name="IdDetalleVenta" ColumnName="IdDetalleVenta" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TipoPagoClienteVentas" TypeName="Model1.TipoPagoClienteVentas" StoreEntitySet="VentasSet">
+      <EndProperty Name="TipoPagoCliente">
+        <ScalarProperty Name="IdTipoPago" ColumnName="TipoPagoCliente_IdTipoPago" />
+      </EndProperty>
+      <EndProperty Name="Ventas">
+        <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VentasRegistroAbonoClientes" TypeName="Model1.VentasRegistroAbonoClientes" StoreEntitySet="RegistroAbonoClientesSet">
+      <EndProperty Name="Ventas">
+        <ScalarProperty Name="IdVenta" ColumnName="Ventas_IdVenta" />
+      </EndProperty>
+      <EndProperty Name="RegistroAbonoClientes">
+        <ScalarProperty Name="IdAbono" ColumnName="IdAbono" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProveedoresCompras" TypeName="Model1.ProveedoresCompras" StoreEntitySet="ComprasSet">
+      <EndProperty Name="Proveedores">
+        <ScalarProperty Name="IdProveedor" ColumnName="Proveedores_IdProveedor" />
+      </EndProperty>
+      <EndProperty Name="Compras">
+        <ScalarProperty Name="IdCompra" ColumnName="IdCompra" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ComprasDetalleCompra" TypeName="Model1.ComprasDetalleCompra" StoreEntitySet="DetalleComprasSet">
+      <EndProperty Name="Compras">
+        <ScalarProperty Name="IdCompra" ColumnName="Compras_IdCompra" />
+      </EndProperty>
+      <EndProperty Name="DetalleCompra">
+        <ScalarProperty Name="IdDetalleCompra" ColumnName="IdDetalleCompra" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MaderasDetalleCompras" TypeName="Model1.MaderasDetalleCompras" StoreEntitySet="DetalleComprasSet">
+      <EndProperty Name="Maderas">
+        <ScalarProperty Name="IdMadera" ColumnName="Maderas_IdMadera" />
+      </EndProperty>
+      <EndProperty Name="DetalleCompras">
+        <ScalarProperty Name="IdDetalleCompra" ColumnName="IdDetalleCompra" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProveedoresPrecioCompraProveedor" TypeName="Model1.ProveedoresPrecioCompraProveedor" StoreEntitySet="PrecioCompraProveedorSet">
+      <EndProperty Name="Proveedores">
+        <ScalarProperty Name="IdProveedor" ColumnName="Proveedores_IdProveedor" />
+      </EndProperty>
+      <EndProperty Name="PrecioCompraProveedor">
+        <ScalarProperty Name="IdPrecioCp" ColumnName="IdPrecioCp" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MaderasPrecioCompraProveedor" TypeName="Model1.MaderasPrecioCompraProveedor" StoreEntitySet="PrecioCompraProveedorSet">
+      <EndProperty Name="Maderas">
+        <ScalarProperty Name="IdMadera" ColumnName="Maderas_IdMadera" />
+      </EndProperty>
+      <EndProperty Name="PrecioCompraProveedor">
+        <ScalarProperty Name="IdPrecioCp" ColumnName="IdPrecioCp" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TipoPagoCompras" TypeName="Model1.TipoPagoCompras" StoreEntitySet="ComprasSet">
+      <EndProperty Name="TipoPago">
+        <ScalarProperty Name="IdTipoPago" ColumnName="TipoPago_IdTipoPago" />
+      </EndProperty>
+      <EndProperty Name="Compras">
+        <ScalarProperty Name="IdCompra" ColumnName="IdCompra" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ComprasRegistroAbonoProveedor" TypeName="Model1.ComprasRegistroAbonoProveedor" StoreEntitySet="RegistroAbonoProveedorSet">
+      <EndProperty Name="Compras">
+        <ScalarProperty Name="IdCompra" ColumnName="Compras_IdCompra" />
+      </EndProperty>
+      <EndProperty Name="RegistroAbonoProveedor">
+        <ScalarProperty Name="IdAbono" ColumnName="IdAbono" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,1064 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BaseDatosInventarioMaderaV8Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="BaseDatosInventarioMaderaV8ModelStoreContainer">
+    <EntitySet Name="ClientesSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.ClientesSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ComprasSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.ComprasSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetalleComprasSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.DetalleComprasSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetalleVentasSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.DetalleVentasSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MaderasSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.MaderasSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioCompraProveedorSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.PrecioCompraProveedorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioVentaClienteSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.PrecioVentaClienteSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProveedoresSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.ProveedoresSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegistroAbonoClientesSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.RegistroAbonoClientesSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegistroAbonoProveedorSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.RegistroAbonoProveedorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoPagoSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.TipoPagoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuariosSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.UsuariosSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VentasSet" EntityType="BaseDatosInventarioMaderaV8Model.Store.VentasSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ClientesPrecioVentaCliente" Association="BaseDatosInventarioMaderaV8Model.Store.FK_ClientesPrecioVentaCliente">
+      <End Role="ClientesSet" EntitySet="ClientesSet" />
+      <End Role="PrecioVentaClienteSet" EntitySet="PrecioVentaClienteSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientesSetVentasSet" Association="BaseDatosInventarioMaderaV8Model.Store.FK_ClientesSetVentasSet">
+      <End Role="ClientesSet" EntitySet="ClientesSet" />
+      <End Role="VentasSet" EntitySet="VentasSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasDetalleCompra" Association="BaseDatosInventarioMaderaV8Model.Store.FK_ComprasDetalleCompra">
+      <End Role="ComprasSet" EntitySet="ComprasSet" />
+      <End Role="DetalleComprasSet" EntitySet="DetalleComprasSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasRegistroAbonoProveedor" Association="BaseDatosInventarioMaderaV8Model.Store.FK_ComprasRegistroAbonoProveedor">
+      <End Role="ComprasSet" EntitySet="ComprasSet" />
+      <End Role="RegistroAbonoProveedorSet" EntitySet="RegistroAbonoProveedorSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProveedoresCompras" Association="BaseDatosInventarioMaderaV8Model.Store.FK_ProveedoresCompras">
+      <End Role="ProveedoresSet" EntitySet="ProveedoresSet" />
+      <End Role="ComprasSet" EntitySet="ComprasSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoPagoCompras" Association="BaseDatosInventarioMaderaV8Model.Store.FK_TipoPagoCompras">
+      <End Role="TipoPagoSet" EntitySet="TipoPagoSet" />
+      <End Role="ComprasSet" EntitySet="ComprasSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioCompraProveedorSetDetalleComprasSet" Association="BaseDatosInventarioMaderaV8Model.Store.FK_PrecioCompraProveedorSetDetalleComprasSet">
+      <End Role="PrecioCompraProveedorSet" EntitySet="PrecioCompraProveedorSet" />
+      <End Role="DetalleComprasSet" EntitySet="DetalleComprasSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioVentaClienteSetDetalleVentasSet" Association="BaseDatosInventarioMaderaV8Model.Store.FK_PrecioVentaClienteSetDetalleVentasSet">
+      <End Role="PrecioVentaClienteSet" EntitySet="PrecioVentaClienteSet" />
+      <End Role="DetalleVentasSet" EntitySet="DetalleVentasSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasDetalleVentas" Association="BaseDatosInventarioMaderaV8Model.Store.FK_VentasDetalleVentas">
+      <End Role="VentasSet" EntitySet="VentasSet" />
+      <End Role="DetalleVentasSet" EntitySet="DetalleVentasSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MaderasPrecioCompraProveedor" Association="BaseDatosInventarioMaderaV8Model.Store.FK_MaderasPrecioCompraProveedor">
+      <End Role="MaderasSet" EntitySet="MaderasSet" />
+      <End Role="PrecioCompraProveedorSet" EntitySet="PrecioCompraProveedorSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MaderasSetPrecioVentaClienteSet" Association="BaseDatosInventarioMaderaV8Model.Store.FK_MaderasSetPrecioVentaClienteSet">
+      <End Role="MaderasSet" EntitySet="MaderasSet" />
+      <End Role="PrecioVentaClienteSet" EntitySet="PrecioVentaClienteSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProveedoresPrecioCompraProveedor" Association="BaseDatosInventarioMaderaV8Model.Store.FK_ProveedoresPrecioCompraProveedor">
+      <End Role="ProveedoresSet" EntitySet="ProveedoresSet" />
+      <End Role="PrecioCompraProveedorSet" EntitySet="PrecioCompraProveedorSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasRegistroAbonoClientes" Association="BaseDatosInventarioMaderaV8Model.Store.FK_VentasRegistroAbonoClientes">
+      <End Role="VentasSet" EntitySet="VentasSet" />
+      <End Role="RegistroAbonoClientesSet" EntitySet="RegistroAbonoClientesSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoPagoSetVentasSet" Association="BaseDatosInventarioMaderaV8Model.Store.FK_TipoPagoSetVentasSet">
+      <End Role="TipoPagoSet" EntitySet="TipoPagoSet" />
+      <End Role="VentasSet" EntitySet="VentasSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ClientesSet">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="App" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Apm" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumCel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Correo" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FechaRegistro" Type="datetime" Nullable="false" />
+    <Property Name="Estatus" Type="smallint" Nullable="false" />
+    <Property Name="Calle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumInt" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="NumExt" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ciudad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NombreEmpresa" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ComprasSet">
+    <Key>
+      <PropertyRef Name="IdCompra" />
+    </Key>
+    <Property Name="IdCompra" Type="int" Nullable="false" />
+    <Property Name="FechaCompra" Type="datetime" Nullable="false" />
+    <Property Name="TotalProducto" Type="bigint" Nullable="false" />
+    <Property Name="PrecioTotal" Type="float" Nullable="false" />
+    <Property Name="FechaRegistro" Type="datetime" Nullable="false" />
+    <Property Name="PagoCon" Type="float" Nullable="false" />
+    <Property Name="Deuda" Type="float" Nullable="false" />
+    <Property Name="Proveedores_IdProveedor" Type="int" Nullable="false" />
+    <Property Name="TipoPago_IdTipoPago" Type="int" Nullable="false" />
+    <Property Name="NombreEntrega" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NombreRecibe" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleComprasSet">
+    <Key>
+      <PropertyRef Name="IdDetalleCompra" />
+    </Key>
+    <Property Name="IdDetalleCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cantidad" Type="bigint" Nullable="false" />
+    <Property Name="Subtotal" Type="float" Nullable="false" />
+    <Property Name="Compras_IdCompra" Type="int" Nullable="false" />
+    <Property Name="PrecioCompraProveedorSet_IdPrecioCpm" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleVentasSet">
+    <Key>
+      <PropertyRef Name="IdDetalleVenta" />
+    </Key>
+    <Property Name="IdDetalleVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cantidad" Type="bigint" Nullable="false" />
+    <Property Name="SubTotal" Type="float" Nullable="false" />
+    <Property Name="Ventas_IdVenta" Type="int" Nullable="false" />
+    <Property Name="PrecioVentaClienteSet_IdPrecioVcm" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaderasSet">
+    <Key>
+      <PropertyRef Name="IdMadera" />
+    </Key>
+    <Property Name="IdMadera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estatus" Type="smallint" Nullable="false" />
+    <Property Name="Stock" Type="bigint" Nullable="false" />
+    <Property Name="StockControl" Type="bigint" Nullable="false" />
+    <Property Name="FechaMovInventario" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PrecioCompraProveedorSet">
+    <Key>
+      <PropertyRef Name="IdPrecioCpm" />
+    </Key>
+    <Property Name="IdPrecioCpm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrecioMadera" Type="float" Nullable="false" />
+    <Property Name="Estatus" Type="smallint" Nullable="false" />
+    <Property Name="Proveedores_IdProveedor" Type="int" Nullable="false" />
+    <Property Name="Maderas_IdMadera" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PrecioVentaClienteSet">
+    <Key>
+      <PropertyRef Name="IdPrecioVcm" />
+    </Key>
+    <Property Name="IdPrecioVcm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrecioMadera" Type="float" Nullable="false" />
+    <Property Name="Estatus" Type="smallint" Nullable="false" />
+    <Property Name="Clientes_IdCliente" Type="int" Nullable="false" />
+    <Property Name="Maderas_IdMadera" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProveedoresSet">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+    </Key>
+    <Property Name="IdProveedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="App" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Apm" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumCel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Correo" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FechaRegistro" Type="datetime" Nullable="false" />
+    <Property Name="Estatus" Type="smallint" Nullable="false" />
+    <Property Name="Calle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumExt" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="NumInt" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ciudad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NombreEmpresa" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="RegistroAbonoClientesSet">
+    <Key>
+      <PropertyRef Name="IdAbono" />
+    </Key>
+    <Property Name="IdAbono" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FechaAbono" Type="datetime" Nullable="false" />
+    <Property Name="Debia" Type="float" Nullable="false" />
+    <Property Name="Abono" Type="float" Nullable="false" />
+    <Property Name="Debe" Type="float" Nullable="false" />
+    <Property Name="RecibeAbono" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ventas_IdVenta" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegistroAbonoProveedorSet">
+    <Key>
+      <PropertyRef Name="IdAbono" />
+    </Key>
+    <Property Name="IdAbono" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FechaAbono" Type="datetime" Nullable="false" />
+    <Property Name="Debia" Type="float" Nullable="false" />
+    <Property Name="Abono" Type="float" Nullable="false" />
+    <Property Name="Debe" Type="float" Nullable="false" />
+    <Property Name="RecibeAbono" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Compras_IdCompra" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoPagoSet">
+    <Key>
+      <PropertyRef Name="IdTipoPago" />
+    </Key>
+    <Property Name="IdTipoPago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estatus" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuariosSet">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="App" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Apm" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Contrasena" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estatus" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VentasSet">
+    <Key>
+      <PropertyRef Name="IdVenta" />
+    </Key>
+    <Property Name="IdVenta" Type="int" Nullable="false" />
+    <Property Name="FechaVenta" Type="datetime" Nullable="false" />
+    <Property Name="TotalProducto" Type="bigint" Nullable="false" />
+    <Property Name="PrecioTotal" Type="float" Nullable="false" />
+    <Property Name="FechaRegistro" Type="datetime" Nullable="false" />
+    <Property Name="PagoCon" Type="float" Nullable="false" />
+    <Property Name="Deuda" Type="float" Nullable="false" />
+    <Property Name="ClientesSet_IdCliente" Type="int" Nullable="false" />
+    <Property Name="TipoPagoSet_IdTipoPago" Type="int" Nullable="false" />
+    <Property Name="NombreEntrega" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NombreRecibe" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ClientesPrecioVentaCliente">
+    <End Role="ClientesSet" Type="BaseDatosInventarioMaderaV8Model.Store.ClientesSet" Multiplicity="1" />
+    <End Role="PrecioVentaClienteSet" Type="BaseDatosInventarioMaderaV8Model.Store.PrecioVentaClienteSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientesSet">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="PrecioVentaClienteSet">
+        <PropertyRef Name="Clientes_IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientesSetVentasSet">
+    <End Role="ClientesSet" Type="BaseDatosInventarioMaderaV8Model.Store.ClientesSet" Multiplicity="1" />
+    <End Role="VentasSet" Type="BaseDatosInventarioMaderaV8Model.Store.VentasSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientesSet">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="VentasSet">
+        <PropertyRef Name="ClientesSet_IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasDetalleCompra">
+    <End Role="ComprasSet" Type="BaseDatosInventarioMaderaV8Model.Store.ComprasSet" Multiplicity="1" />
+    <End Role="DetalleComprasSet" Type="BaseDatosInventarioMaderaV8Model.Store.DetalleComprasSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComprasSet">
+        <PropertyRef Name="IdCompra" />
+      </Principal>
+      <Dependent Role="DetalleComprasSet">
+        <PropertyRef Name="Compras_IdCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasRegistroAbonoProveedor">
+    <End Role="ComprasSet" Type="BaseDatosInventarioMaderaV8Model.Store.ComprasSet" Multiplicity="1" />
+    <End Role="RegistroAbonoProveedorSet" Type="BaseDatosInventarioMaderaV8Model.Store.RegistroAbonoProveedorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComprasSet">
+        <PropertyRef Name="IdCompra" />
+      </Principal>
+      <Dependent Role="RegistroAbonoProveedorSet">
+        <PropertyRef Name="Compras_IdCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProveedoresCompras">
+    <End Role="ProveedoresSet" Type="BaseDatosInventarioMaderaV8Model.Store.ProveedoresSet" Multiplicity="1" />
+    <End Role="ComprasSet" Type="BaseDatosInventarioMaderaV8Model.Store.ComprasSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProveedoresSet">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="ComprasSet">
+        <PropertyRef Name="Proveedores_IdProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoPagoCompras">
+    <End Role="TipoPagoSet" Type="BaseDatosInventarioMaderaV8Model.Store.TipoPagoSet" Multiplicity="1" />
+    <End Role="ComprasSet" Type="BaseDatosInventarioMaderaV8Model.Store.ComprasSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPagoSet">
+        <PropertyRef Name="IdTipoPago" />
+      </Principal>
+      <Dependent Role="ComprasSet">
+        <PropertyRef Name="TipoPago_IdTipoPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioCompraProveedorSetDetalleComprasSet">
+    <End Role="PrecioCompraProveedorSet" Type="BaseDatosInventarioMaderaV8Model.Store.PrecioCompraProveedorSet" Multiplicity="1" />
+    <End Role="DetalleComprasSet" Type="BaseDatosInventarioMaderaV8Model.Store.DetalleComprasSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrecioCompraProveedorSet">
+        <PropertyRef Name="IdPrecioCpm" />
+      </Principal>
+      <Dependent Role="DetalleComprasSet">
+        <PropertyRef Name="PrecioCompraProveedorSet_IdPrecioCpm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioVentaClienteSetDetalleVentasSet">
+    <End Role="PrecioVentaClienteSet" Type="BaseDatosInventarioMaderaV8Model.Store.PrecioVentaClienteSet" Multiplicity="1" />
+    <End Role="DetalleVentasSet" Type="BaseDatosInventarioMaderaV8Model.Store.DetalleVentasSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrecioVentaClienteSet">
+        <PropertyRef Name="IdPrecioVcm" />
+      </Principal>
+      <Dependent Role="DetalleVentasSet">
+        <PropertyRef Name="PrecioVentaClienteSet_IdPrecioVcm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasDetalleVentas">
+    <End Role="VentasSet" Type="BaseDatosInventarioMaderaV8Model.Store.VentasSet" Multiplicity="1" />
+    <End Role="DetalleVentasSet" Type="BaseDatosInventarioMaderaV8Model.Store.DetalleVentasSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VentasSet">
+        <PropertyRef Name="IdVenta" />
+      </Principal>
+      <Dependent Role="DetalleVentasSet">
+        <PropertyRef Name="Ventas_IdVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MaderasPrecioCompraProveedor">
+    <End Role="MaderasSet" Type="BaseDatosInventarioMaderaV8Model.Store.MaderasSet" Multiplicity="1" />
+    <End Role="PrecioCompraProveedorSet" Type="BaseDatosInventarioMaderaV8Model.Store.PrecioCompraProveedorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaderasSet">
+        <PropertyRef Name="IdMadera" />
+      </Principal>
+      <Dependent Role="PrecioCompraProveedorSet">
+        <PropertyRef Name="Maderas_IdMadera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MaderasSetPrecioVentaClienteSet">
+    <End Role="MaderasSet" Type="BaseDatosInventarioMaderaV8Model.Store.MaderasSet" Multiplicity="1" />
+    <End Role="PrecioVentaClienteSet" Type="BaseDatosInventarioMaderaV8Model.Store.PrecioVentaClienteSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaderasSet">
+        <PropertyRef Name="IdMadera" />
+      </Principal>
+      <Dependent Role="PrecioVentaClienteSet">
+        <PropertyRef Name="Maderas_IdMadera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProveedoresPrecioCompraProveedor">
+    <End Role="ProveedoresSet" Type="BaseDatosInventarioMaderaV8Model.Store.ProveedoresSet" Multiplicity="1" />
+    <End Role="PrecioCompraProveedorSet" Type="BaseDatosInventarioMaderaV8Model.Store.PrecioCompraProveedorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProveedoresSet">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="PrecioCompraProveedorSet">
+        <PropertyRef Name="Proveedores_IdProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasRegistroAbonoClientes">
+    <End Role="VentasSet" Type="BaseDatosInventarioMaderaV8Model.Store.VentasSet" Multiplicity="1" />
+    <End Role="RegistroAbonoClientesSet" Type="BaseDatosInventarioMaderaV8Model.Store.RegistroAbonoClientesSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VentasSet">
+        <PropertyRef Name="IdVenta" />
+      </Principal>
+      <Dependent Role="RegistroAbonoClientesSet">
+        <PropertyRef Name="Ventas_IdVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoPagoSetVentasSet">
+    <End Role="TipoPagoSet" Type="BaseDatosInventarioMaderaV8Model.Store.TipoPagoSet" Multiplicity="1" />
+    <End Role="VentasSet" Type="BaseDatosInventarioMaderaV8Model.Store.VentasSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPagoSet">
+        <PropertyRef Name="IdTipoPago" />
+      </Principal>
+      <Dependent Role="VentasSet">
+        <PropertyRef Name="TipoPagoSet_IdTipoPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BaseDatosInventarioMaderaV8Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ClientesSet">
+          <Key>
+            <PropertyRef Name="IdCliente" />
+          </Key>
+          <Property Name="IdCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="App" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Apm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumCel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Correo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Estatus" Type="Int16" Nullable="false" />
+          <Property Name="Calle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumInt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NumExt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ciudad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NombreEmpresa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PrecioVentaClienteSet" Relationship="Self.FK_ClientesPrecioVentaCliente" FromRole="ClientesSet" ToRole="PrecioVentaClienteSet" />
+          <NavigationProperty Name="VentasSet" Relationship="Self.FK_ClientesSetVentasSet" FromRole="ClientesSet" ToRole="VentasSet" />
+        </EntityType>
+        <EntityType Name="ComprasSet">
+          <Key>
+            <PropertyRef Name="IdCompra" />
+          </Key>
+          <Property Name="IdCompra" Type="Int32" Nullable="false" />
+          <Property Name="FechaCompra" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TotalProducto" Type="Int64" Nullable="false" />
+          <Property Name="PrecioTotal" Type="Double" Nullable="false" />
+          <Property Name="FechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PagoCon" Type="Double" Nullable="false" />
+          <Property Name="Deuda" Type="Double" Nullable="false" />
+          <Property Name="Proveedores_IdProveedor" Type="Int32" Nullable="false" />
+          <Property Name="TipoPago_IdTipoPago" Type="Int32" Nullable="false" />
+          <Property Name="NombreEntrega" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NombreRecibe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="DetalleComprasSet" Relationship="Self.FK_ComprasDetalleCompra" FromRole="ComprasSet" ToRole="DetalleComprasSet" />
+          <NavigationProperty Name="RegistroAbonoProveedorSet" Relationship="Self.FK_ComprasRegistroAbonoProveedor" FromRole="ComprasSet" ToRole="RegistroAbonoProveedorSet" />
+          <NavigationProperty Name="ProveedoresSet" Relationship="Self.FK_ProveedoresCompras" FromRole="ComprasSet" ToRole="ProveedoresSet" />
+          <NavigationProperty Name="TipoPagoSet" Relationship="Self.FK_TipoPagoCompras" FromRole="ComprasSet" ToRole="TipoPagoSet" />
+        </EntityType>
+        <EntityType Name="DetalleComprasSet">
+          <Key>
+            <PropertyRef Name="IdDetalleCompra" />
+          </Key>
+          <Property Name="IdDetalleCompra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cantidad" Type="Int64" Nullable="false" />
+          <Property Name="Subtotal" Type="Double" Nullable="false" />
+          <Property Name="Compras_IdCompra" Type="Int32" Nullable="false" />
+          <Property Name="PrecioCompraProveedorSet_IdPrecioCpm" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ComprasSet" Relationship="Self.FK_ComprasDetalleCompra" FromRole="DetalleComprasSet" ToRole="ComprasSet" />
+          <NavigationProperty Name="PrecioCompraProveedorSet" Relationship="Self.FK_PrecioCompraProveedorSetDetalleComprasSet" FromRole="DetalleComprasSet" ToRole="PrecioCompraProveedorSet" />
+        </EntityType>
+        <EntityType Name="DetalleVentasSet">
+          <Key>
+            <PropertyRef Name="IdDetalleVenta" />
+          </Key>
+          <Property Name="IdDetalleVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cantidad" Type="Int64" Nullable="false" />
+          <Property Name="SubTotal" Type="Double" Nullable="false" />
+          <Property Name="Ventas_IdVenta" Type="Int32" Nullable="false" />
+          <Property Name="PrecioVentaClienteSet_IdPrecioVcm" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PrecioVentaClienteSet" Relationship="Self.FK_PrecioVentaClienteSetDetalleVentasSet" FromRole="DetalleVentasSet" ToRole="PrecioVentaClienteSet" />
+          <NavigationProperty Name="VentasSet" Relationship="Self.FK_VentasDetalleVentas" FromRole="DetalleVentasSet" ToRole="VentasSet" />
+        </EntityType>
+        <EntityType Name="MaderasSet">
+          <Key>
+            <PropertyRef Name="IdMadera" />
+          </Key>
+          <Property Name="IdMadera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Estatus" Type="Int16" Nullable="false" />
+          <Property Name="Stock" Type="Int64" Nullable="false" />
+          <Property Name="StockControl" Type="Int64" Nullable="false" />
+          <Property Name="FechaMovInventario" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="PrecioCompraProveedorSet" Relationship="Self.FK_MaderasPrecioCompraProveedor" FromRole="MaderasSet" ToRole="PrecioCompraProveedorSet" />
+          <NavigationProperty Name="PrecioVentaClienteSet" Relationship="Self.FK_MaderasSetPrecioVentaClienteSet" FromRole="MaderasSet" ToRole="PrecioVentaClienteSet" />
+        </EntityType>
+        <EntityType Name="PrecioCompraProveedorSet">
+          <Key>
+            <PropertyRef Name="IdPrecioCpm" />
+          </Key>
+          <Property Name="IdPrecioCpm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PrecioMadera" Type="Double" Nullable="false" />
+          <Property Name="Estatus" Type="Int16" Nullable="false" />
+          <Property Name="Proveedores_IdProveedor" Type="Int32" Nullable="false" />
+          <Property Name="Maderas_IdMadera" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DetalleComprasSet" Relationship="Self.FK_PrecioCompraProveedorSetDetalleComprasSet" FromRole="PrecioCompraProveedorSet" ToRole="DetalleComprasSet" />
+          <NavigationProperty Name="MaderasSet" Relationship="Self.FK_MaderasPrecioCompraProveedor" FromRole="PrecioCompraProveedorSet" ToRole="MaderasSet" />
+          <NavigationProperty Name="ProveedoresSet" Relationship="Self.FK_ProveedoresPrecioCompraProveedor" FromRole="PrecioCompraProveedorSet" ToRole="ProveedoresSet" />
+        </EntityType>
+        <EntityType Name="PrecioVentaClienteSet">
+          <Key>
+            <PropertyRef Name="IdPrecioVcm" />
+          </Key>
+          <Property Name="IdPrecioVcm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PrecioMadera" Type="Double" Nullable="false" />
+          <Property Name="Estatus" Type="Int16" Nullable="false" />
+          <Property Name="Clientes_IdCliente" Type="Int32" Nullable="false" />
+          <Property Name="Maderas_IdMadera" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ClientesSet" Relationship="Self.FK_ClientesPrecioVentaCliente" FromRole="PrecioVentaClienteSet" ToRole="ClientesSet" />
+          <NavigationProperty Name="DetalleVentasSet" Relationship="Self.FK_PrecioVentaClienteSetDetalleVentasSet" FromRole="PrecioVentaClienteSet" ToRole="DetalleVentasSet" />
+          <NavigationProperty Name="MaderasSet" Relationship="Self.FK_MaderasSetPrecioVentaClienteSet" FromRole="PrecioVentaClienteSet" ToRole="MaderasSet" />
+        </EntityType>
+        <EntityType Name="ProveedoresSet">
+          <Key>
+            <PropertyRef Name="IdProveedor" />
+          </Key>
+          <Property Name="IdProveedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="App" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Apm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumCel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Correo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Estatus" Type="Int16" Nullable="false" />
+          <Property Name="Calle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumExt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NumInt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ciudad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NombreEmpresa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ComprasSet" Relationship="Self.FK_ProveedoresCompras" FromRole="ProveedoresSet" ToRole="ComprasSet" />
+          <NavigationProperty Name="PrecioCompraProveedorSet" Relationship="Self.FK_ProveedoresPrecioCompraProveedor" FromRole="ProveedoresSet" ToRole="PrecioCompraProveedorSet" />
+        </EntityType>
+        <EntityType Name="RegistroAbonoClientesSet">
+          <Key>
+            <PropertyRef Name="IdAbono" />
+          </Key>
+          <Property Name="IdAbono" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaAbono" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Debia" Type="Double" Nullable="false" />
+          <Property Name="Abono" Type="Double" Nullable="false" />
+          <Property Name="Debe" Type="Double" Nullable="false" />
+          <Property Name="RecibeAbono" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ventas_IdVenta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="VentasSet" Relationship="Self.FK_VentasRegistroAbonoClientes" FromRole="RegistroAbonoClientesSet" ToRole="VentasSet" />
+        </EntityType>
+        <EntityType Name="RegistroAbonoProveedorSet">
+          <Key>
+            <PropertyRef Name="IdAbono" />
+          </Key>
+          <Property Name="IdAbono" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaAbono" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Debia" Type="Double" Nullable="false" />
+          <Property Name="Abono" Type="Double" Nullable="false" />
+          <Property Name="Debe" Type="Double" Nullable="false" />
+          <Property Name="RecibeAbono" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Compras_IdCompra" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ComprasSet" Relationship="Self.FK_ComprasRegistroAbonoProveedor" FromRole="RegistroAbonoProveedorSet" ToRole="ComprasSet" />
+        </EntityType>
+        <EntityType Name="TipoPagoSet">
+          <Key>
+            <PropertyRef Name="IdTipoPago" />
+          </Key>
+          <Property Name="IdTipoPago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Estatus" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="ComprasSet" Relationship="Self.FK_TipoPagoCompras" FromRole="TipoPagoSet" ToRole="ComprasSet" />
+          <NavigationProperty Name="VentasSet" Relationship="Self.FK_TipoPagoSetVentasSet" FromRole="TipoPagoSet" ToRole="VentasSet" />
+        </EntityType>
+        <EntityType Name="UsuariosSet">
+          <Key>
+            <PropertyRef Name="IdUser" />
+          </Key>
+          <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="App" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Apm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Usuario" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contrasena" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Estatus" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VentasSet">
+          <Key>
+            <PropertyRef Name="IdVenta" />
+          </Key>
+          <Property Name="IdVenta" Type="Int32" Nullable="false" />
+          <Property Name="FechaVenta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TotalProducto" Type="Int64" Nullable="false" />
+          <Property Name="PrecioTotal" Type="Double" Nullable="false" />
+          <Property Name="FechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PagoCon" Type="Double" Nullable="false" />
+          <Property Name="Deuda" Type="Double" Nullable="false" />
+          <Property Name="ClientesSet_IdCliente" Type="Int32" Nullable="false" />
+          <Property Name="TipoPagoSet_IdTipoPago" Type="Int32" Nullable="false" />
+          <Property Name="NombreEntrega" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NombreRecibe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ClientesSet" Relationship="Self.FK_ClientesSetVentasSet" FromRole="VentasSet" ToRole="ClientesSet" />
+          <NavigationProperty Name="DetalleVentasSet" Relationship="Self.FK_VentasDetalleVentas" FromRole="VentasSet" ToRole="DetalleVentasSet" />
+          <NavigationProperty Name="RegistroAbonoClientesSet" Relationship="Self.FK_VentasRegistroAbonoClientes" FromRole="VentasSet" ToRole="RegistroAbonoClientesSet" />
+          <NavigationProperty Name="TipoPagoSet" Relationship="Self.FK_TipoPagoSetVentasSet" FromRole="VentasSet" ToRole="TipoPagoSet" />
+        </EntityType>
+        <Association Name="FK_ClientesPrecioVentaCliente">
+          <End Role="ClientesSet" Type="Self.ClientesSet" Multiplicity="1" />
+          <End Role="PrecioVentaClienteSet" Type="Self.PrecioVentaClienteSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientesSet">
+              <PropertyRef Name="IdCliente" />
+            </Principal>
+            <Dependent Role="PrecioVentaClienteSet">
+              <PropertyRef Name="Clientes_IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClientesSetVentasSet">
+          <End Role="ClientesSet" Type="Self.ClientesSet" Multiplicity="1" />
+          <End Role="VentasSet" Type="Self.VentasSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientesSet">
+              <PropertyRef Name="IdCliente" />
+            </Principal>
+            <Dependent Role="VentasSet">
+              <PropertyRef Name="ClientesSet_IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ComprasDetalleCompra">
+          <End Role="ComprasSet" Type="Self.ComprasSet" Multiplicity="1" />
+          <End Role="DetalleComprasSet" Type="Self.DetalleComprasSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ComprasSet">
+              <PropertyRef Name="IdCompra" />
+            </Principal>
+            <Dependent Role="DetalleComprasSet">
+              <PropertyRef Name="Compras_IdCompra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ComprasRegistroAbonoProveedor">
+          <End Role="ComprasSet" Type="Self.ComprasSet" Multiplicity="1" />
+          <End Role="RegistroAbonoProveedorSet" Type="Self.RegistroAbonoProveedorSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ComprasSet">
+              <PropertyRef Name="IdCompra" />
+            </Principal>
+            <Dependent Role="RegistroAbonoProveedorSet">
+              <PropertyRef Name="Compras_IdCompra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProveedoresCompras">
+          <End Role="ProveedoresSet" Type="Self.ProveedoresSet" Multiplicity="1" />
+          <End Role="ComprasSet" Type="Self.ComprasSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProveedoresSet">
+              <PropertyRef Name="IdProveedor" />
+            </Principal>
+            <Dependent Role="ComprasSet">
+              <PropertyRef Name="Proveedores_IdProveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoPagoCompras">
+          <End Role="TipoPagoSet" Type="Self.TipoPagoSet" Multiplicity="1" />
+          <End Role="ComprasSet" Type="Self.ComprasSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoPagoSet">
+              <PropertyRef Name="IdTipoPago" />
+            </Principal>
+            <Dependent Role="ComprasSet">
+              <PropertyRef Name="TipoPago_IdTipoPago" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrecioCompraProveedorSetDetalleComprasSet">
+          <End Role="PrecioCompraProveedorSet" Type="Self.PrecioCompraProveedorSet" Multiplicity="1" />
+          <End Role="DetalleComprasSet" Type="Self.DetalleComprasSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrecioCompraProveedorSet">
+              <PropertyRef Name="IdPrecioCpm" />
+            </Principal>
+            <Dependent Role="DetalleComprasSet">
+              <PropertyRef Name="PrecioCompraProveedorSet_IdPrecioCpm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrecioVentaClienteSetDetalleVentasSet">
+          <End Role="PrecioVentaClienteSet" Type="Self.PrecioVentaClienteSet" Multiplicity="1" />
+          <End Role="DetalleVentasSet" Type="Self.DetalleVentasSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrecioVentaClienteSet">
+              <PropertyRef Name="IdPrecioVcm" />
+            </Principal>
+            <Dependent Role="DetalleVentasSet">
+              <PropertyRef Name="PrecioVentaClienteSet_IdPrecioVcm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VentasDetalleVentas">
+          <End Role="VentasSet" Type="Self.VentasSet" Multiplicity="1" />
+          <End Role="DetalleVentasSet" Type="Self.DetalleVentasSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VentasSet">
+              <PropertyRef Name="IdVenta" />
+            </Principal>
+            <Dependent Role="DetalleVentasSet">
+              <PropertyRef Name="Ventas_IdVenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MaderasPrecioCompraProveedor">
+          <End Role="MaderasSet" Type="Self.MaderasSet" Multiplicity="1" />
+          <End Role="PrecioCompraProveedorSet" Type="Self.PrecioCompraProveedorSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MaderasSet">
+              <PropertyRef Name="IdMadera" />
+            </Principal>
+            <Dependent Role="PrecioCompraProveedorSet">
+              <PropertyRef Name="Maderas_IdMadera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MaderasSetPrecioVentaClienteSet">
+          <End Role="MaderasSet" Type="Self.MaderasSet" Multiplicity="1" />
+          <End Role="PrecioVentaClienteSet" Type="Self.PrecioVentaClienteSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MaderasSet">
+              <PropertyRef Name="IdMadera" />
+            </Principal>
+            <Dependent Role="PrecioVentaClienteSet">
+              <PropertyRef Name="Maderas_IdMadera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProveedoresPrecioCompraProveedor">
+          <End Role="ProveedoresSet" Type="Self.ProveedoresSet" Multiplicity="1" />
+          <End Role="PrecioCompraProveedorSet" Type="Self.PrecioCompraProveedorSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProveedoresSet">
+              <PropertyRef Name="IdProveedor" />
+            </Principal>
+            <Dependent Role="PrecioCompraProveedorSet">
+              <PropertyRef Name="Proveedores_IdProveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VentasRegistroAbonoClientes">
+          <End Role="VentasSet" Type="Self.VentasSet" Multiplicity="1" />
+          <End Role="RegistroAbonoClientesSet" Type="Self.RegistroAbonoClientesSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VentasSet">
+              <PropertyRef Name="IdVenta" />
+            </Principal>
+            <Dependent Role="RegistroAbonoClientesSet">
+              <PropertyRef Name="Ventas_IdVenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoPagoSetVentasSet">
+          <End Role="TipoPagoSet" Type="Self.TipoPagoSet" Multiplicity="1" />
+          <End Role="VentasSet" Type="Self.VentasSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoPagoSet">
+              <PropertyRef Name="IdTipoPago" />
+            </Principal>
+            <Dependent Role="VentasSet">
+              <PropertyRef Name="TipoPagoSet_IdTipoPago" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BaseDatosInventarioMaderaV8Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClientesSet" EntityType="Self.ClientesSet" />
+          <EntitySet Name="ComprasSet" EntityType="Self.ComprasSet" />
+          <EntitySet Name="DetalleComprasSet" EntityType="Self.DetalleComprasSet" />
+          <EntitySet Name="DetalleVentasSet" EntityType="Self.DetalleVentasSet" />
+          <EntitySet Name="MaderasSet" EntityType="Self.MaderasSet" />
+          <EntitySet Name="PrecioCompraProveedorSet" EntityType="Self.PrecioCompraProveedorSet" />
+          <EntitySet Name="PrecioVentaClienteSet" EntityType="Self.PrecioVentaClienteSet" />
+          <EntitySet Name="ProveedoresSet" EntityType="Self.ProveedoresSet" />
+          <EntitySet Name="RegistroAbonoClientesSet" EntityType="Self.RegistroAbonoClientesSet" />
+          <EntitySet Name="RegistroAbonoProveedorSet" EntityType="Self.RegistroAbonoProveedorSet" />
+          <EntitySet Name="TipoPagoSet" EntityType="Self.TipoPagoSet" />
+          <EntitySet Name="UsuariosSet" EntityType="Self.UsuariosSet" />
+          <EntitySet Name="VentasSet" EntityType="Self.VentasSet" />
+          <AssociationSet Name="FK_ClientesPrecioVentaCliente" Association="Self.FK_ClientesPrecioVentaCliente">
+            <End Role="ClientesSet" EntitySet="ClientesSet" />
+            <End Role="PrecioVentaClienteSet" EntitySet="PrecioVentaClienteSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClientesSetVentasSet" Association="Self.FK_ClientesSetVentasSet">
+            <End Role="ClientesSet" EntitySet="ClientesSet" />
+            <End Role="VentasSet" EntitySet="VentasSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ComprasDetalleCompra" Association="Self.FK_ComprasDetalleCompra">
+            <End Role="ComprasSet" EntitySet="ComprasSet" />
+            <End Role="DetalleComprasSet" EntitySet="DetalleComprasSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ComprasRegistroAbonoProveedor" Association="Self.FK_ComprasRegistroAbonoProveedor">
+            <End Role="ComprasSet" EntitySet="ComprasSet" />
+            <End Role="RegistroAbonoProveedorSet" EntitySet="RegistroAbonoProveedorSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProveedoresCompras" Association="Self.FK_ProveedoresCompras">
+            <End Role="ProveedoresSet" EntitySet="ProveedoresSet" />
+            <End Role="ComprasSet" EntitySet="ComprasSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoPagoCompras" Association="Self.FK_TipoPagoCompras">
+            <End Role="TipoPagoSet" EntitySet="TipoPagoSet" />
+            <End Role="ComprasSet" EntitySet="ComprasSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrecioCompraProveedorSetDetalleComprasSet" Association="Self.FK_PrecioCompraProveedorSetDetalleComprasSet">
+            <End Role="PrecioCompraProveedorSet" EntitySet="PrecioCompraProveedorSet" />
+            <End Role="DetalleComprasSet" EntitySet="DetalleComprasSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrecioVentaClienteSetDetalleVentasSet" Association="Self.FK_PrecioVentaClienteSetDetalleVentasSet">
+            <End Role="PrecioVentaClienteSet" EntitySet="PrecioVentaClienteSet" />
+            <End Role="DetalleVentasSet" EntitySet="DetalleVentasSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VentasDetalleVentas" Association="Self.FK_VentasDetalleVentas">
+            <End Role="VentasSet" EntitySet="VentasSet" />
+            <End Role="DetalleVentasSet" EntitySet="DetalleVentasSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MaderasPrecioCompraProveedor" Association="Self.FK_MaderasPrecioCompraProveedor">
+            <End Role="MaderasSet" EntitySet="MaderasSet" />
+            <End Role="PrecioCompraProveedorSet" EntitySet="PrecioCompraProveedorSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MaderasSetPrecioVentaClienteSet" Association="Self.FK_MaderasSetPrecioVentaClienteSet">
+            <End Role="MaderasSet" EntitySet="MaderasSet" />
+            <End Role="PrecioVentaClienteSet" EntitySet="PrecioVentaClienteSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProveedoresPrecioCompraProveedor" Association="Self.FK_ProveedoresPrecioCompraProveedor">
+            <End Role="ProveedoresSet" EntitySet="ProveedoresSet" />
+            <End Role="PrecioCompraProveedorSet" EntitySet="PrecioCompraProveedorSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VentasRegistroAbonoClientes" Association="Self.FK_VentasRegistroAbonoClientes">
+            <End Role="VentasSet" EntitySet="VentasSet" />
+            <End Role="RegistroAbonoClientesSet" EntitySet="RegistroAbonoClientesSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoPagoSetVentasSet" Association="Self.FK_TipoPagoSetVentasSet">
+            <End Role="TipoPagoSet" EntitySet="TipoPagoSet" />
+            <End Role="VentasSet" EntitySet="VentasSet" />
+          </AssociationSet>
+          <EntitySet Name="Entity1Set" EntityType="BaseDatosInventarioMaderaV8Model.Entity1" />
+        </EntityContainer>
+        <EntityType Name="Entity1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BaseDatosInventarioMaderaV8ModelStoreContainer" CdmEntityContainer="BaseDatosInventarioMaderaV8Entities">
+    <EntitySetMapping Name="ClientesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.ClientesSet)">
+        <MappingFragment StoreEntitySet="ClientesSet">
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="App" ColumnName="App" />
+          <ScalarProperty Name="Apm" ColumnName="Apm" />
+          <ScalarProperty Name="NumCel" ColumnName="NumCel" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="NumInt" ColumnName="NumInt" />
+          <ScalarProperty Name="NumExt" ColumnName="NumExt" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="NombreEmpresa" ColumnName="NombreEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComprasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.ComprasSet)">
+        <MappingFragment StoreEntitySet="ComprasSet">
+          <ScalarProperty Name="IdCompra" ColumnName="IdCompra" />
+          <ScalarProperty Name="FechaCompra" ColumnName="FechaCompra" />
+          <ScalarProperty Name="TotalProducto" ColumnName="TotalProducto" />
+          <ScalarProperty Name="PrecioTotal" ColumnName="PrecioTotal" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="PagoCon" ColumnName="PagoCon" />
+          <ScalarProperty Name="Deuda" ColumnName="Deuda" />
+          <ScalarProperty Name="Proveedores_IdProveedor" ColumnName="Proveedores_IdProveedor" />
+          <ScalarProperty Name="TipoPago_IdTipoPago" ColumnName="TipoPago_IdTipoPago" />
+          <ScalarProperty Name="NombreEntrega" ColumnName="NombreEntrega" />
+          <ScalarProperty Name="NombreRecibe" ColumnName="NombreRecibe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleComprasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.DetalleComprasSet)">
+        <MappingFragment StoreEntitySet="DetalleComprasSet">
+          <ScalarProperty Name="IdDetalleCompra" ColumnName="IdDetalleCompra" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="Compras_IdCompra" ColumnName="Compras_IdCompra" />
+          <ScalarProperty Name="PrecioCompraProveedorSet_IdPrecioCpm" ColumnName="PrecioCompraProveedorSet_IdPrecioCpm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleVentasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.DetalleVentasSet)">
+        <MappingFragment StoreEntitySet="DetalleVentasSet">
+          <ScalarProperty Name="IdDetalleVenta" ColumnName="IdDetalleVenta" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+          <ScalarProperty Name="Ventas_IdVenta" ColumnName="Ventas_IdVenta" />
+          <ScalarProperty Name="PrecioVentaClienteSet_IdPrecioVcm" ColumnName="PrecioVentaClienteSet_IdPrecioVcm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaderasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.MaderasSet)">
+        <MappingFragment StoreEntitySet="MaderasSet">
+          <ScalarProperty Name="IdMadera" ColumnName="IdMadera" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="StockControl" ColumnName="StockControl" />
+          <ScalarProperty Name="FechaMovInventario" ColumnName="FechaMovInventario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioCompraProveedorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.PrecioCompraProveedorSet)">
+        <MappingFragment StoreEntitySet="PrecioCompraProveedorSet">
+          <ScalarProperty Name="IdPrecioCpm" ColumnName="IdPrecioCpm" />
+          <ScalarProperty Name="PrecioMadera" ColumnName="PrecioMadera" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Proveedores_IdProveedor" ColumnName="Proveedores_IdProveedor" />
+          <ScalarProperty Name="Maderas_IdMadera" ColumnName="Maderas_IdMadera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioVentaClienteSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.PrecioVentaClienteSet)">
+        <MappingFragment StoreEntitySet="PrecioVentaClienteSet">
+          <ScalarProperty Name="IdPrecioVcm" ColumnName="IdPrecioVcm" />
+          <ScalarProperty Name="PrecioMadera" ColumnName="PrecioMadera" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Clientes_IdCliente" ColumnName="Clientes_IdCliente" />
+          <ScalarProperty Name="Maderas_IdMadera" ColumnName="Maderas_IdMadera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProveedoresSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.ProveedoresSet)">
+        <MappingFragment StoreEntitySet="ProveedoresSet">
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="App" ColumnName="App" />
+          <ScalarProperty Name="Apm" ColumnName="Apm" />
+          <ScalarProperty Name="NumCel" ColumnName="NumCel" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="NumExt" ColumnName="NumExt" />
+          <ScalarProperty Name="NumInt" ColumnName="NumInt" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="NombreEmpresa" ColumnName="NombreEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroAbonoClientesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.RegistroAbonoClientesSet)">
+        <MappingFragment StoreEntitySet="RegistroAbonoClientesSet">
+          <ScalarProperty Name="IdAbono" ColumnName="IdAbono" />
+          <ScalarProperty Name="FechaAbono" ColumnName="FechaAbono" />
+          <ScalarProperty Name="Debia" ColumnName="Debia" />
+          <ScalarProperty Name="Abono" ColumnName="Abono" />
+          <ScalarProperty Name="Debe" ColumnName="Debe" />
+          <ScalarProperty Name="RecibeAbono" ColumnName="RecibeAbono" />
+          <ScalarProperty Name="Ventas_IdVenta" ColumnName="Ventas_IdVenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroAbonoProveedorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.RegistroAbonoProveedorSet)">
+        <MappingFragment StoreEntitySet="RegistroAbonoProveedorSet">
+          <ScalarProperty Name="IdAbono" ColumnName="IdAbono" />
+          <ScalarProperty Name="FechaAbono" ColumnName="FechaAbono" />
+          <ScalarProperty Name="Debia" ColumnName="Debia" />
+          <ScalarProperty Name="Abono" ColumnName="Abono" />
+          <ScalarProperty Name="Debe" ColumnName="Debe" />
+          <ScalarProperty Name="RecibeAbono" ColumnName="RecibeAbono" />
+          <ScalarProperty Name="Compras_IdCompra" ColumnName="Compras_IdCompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPagoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.TipoPagoSet)">
+        <MappingFragment StoreEntitySet="TipoPagoSet">
+          <ScalarProperty Name="IdTipoPago" ColumnName="IdTipoPago" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuariosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.UsuariosSet)">
+        <MappingFragment StoreEntitySet="UsuariosSet">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="App" ColumnName="App" />
+          <ScalarProperty Name="Apm" ColumnName="Apm" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VentasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.VentasSet)">
+        <MappingFragment StoreEntitySet="VentasSet">
+          <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
+          <ScalarProperty Name="FechaVenta" ColumnName="FechaVenta" />
+          <ScalarProperty Name="TotalProducto" ColumnName="TotalProducto" />
+          <ScalarProperty Name="PrecioTotal" ColumnName="PrecioTotal" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="PagoCon" ColumnName="PagoCon" />
+          <ScalarProperty Name="Deuda" ColumnName="Deuda" />
+          <ScalarProperty Name="ClientesSet_IdCliente" ColumnName="ClientesSet_IdCliente" />
+          <ScalarProperty Name="TipoPagoSet_IdTipoPago" ColumnName="TipoPagoSet_IdTipoPago" />
+          <ScalarProperty Name="NombreEntrega" ColumnName="NombreEntrega" />
+          <ScalarProperty Name="NombreRecibe" ColumnName="NombreRecibe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BaseDatosInventarioMaderaV8ModelStoreContainer" CdmEntityContainer="BaseDatosInventarioMaderaV8Entities">
+    <EntitySetMapping Name="ClientesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.ClientesSet)">
+        <MappingFragment StoreEntitySet="ClientesSet">
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="App" ColumnName="App" />
+          <ScalarProperty Name="Apm" ColumnName="Apm" />
+          <ScalarProperty Name="NumCel" ColumnName="NumCel" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="NumInt" ColumnName="NumInt" />
+          <ScalarProperty Name="NumExt" ColumnName="NumExt" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="NombreEmpresa" ColumnName="NombreEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComprasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.ComprasSet)">
+        <MappingFragment StoreEntitySet="ComprasSet">
+          <ScalarProperty Name="IdCompra" ColumnName="IdCompra" />
+          <ScalarProperty Name="FechaCompra" ColumnName="FechaCompra" />
+          <ScalarProperty Name="TotalProducto" ColumnName="TotalProducto" />
+          <ScalarProperty Name="PrecioTotal" ColumnName="PrecioTotal" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="PagoCon" ColumnName="PagoCon" />
+          <ScalarProperty Name="Deuda" ColumnName="Deuda" />
+          <ScalarProperty Name="Proveedores_IdProveedor" ColumnName="Proveedores_IdProveedor" />
+          <ScalarProperty Name="TipoPago_IdTipoPago" ColumnName="TipoPago_IdTipoPago" />
+          <ScalarProperty Name="NombreEntrega" ColumnName="NombreEntrega" />
+          <ScalarProperty Name="NombreRecibe" ColumnName="NombreRecibe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleComprasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.DetalleComprasSet)">
+        <MappingFragment StoreEntitySet="DetalleComprasSet">
+          <ScalarProperty Name="IdDetalleCompra" ColumnName="IdDetalleCompra" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="Compras_IdCompra" ColumnName="Compras_IdCompra" />
+          <ScalarProperty Name="PrecioCompraProveedorSet_IdPrecioCpm" ColumnName="PrecioCompraProveedorSet_IdPrecioCpm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleVentasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.DetalleVentasSet)">
+        <MappingFragment StoreEntitySet="DetalleVentasSet">
+          <ScalarProperty Name="IdDetalleVenta" ColumnName="IdDetalleVenta" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+          <ScalarProperty Name="Ventas_IdVenta" ColumnName="Ventas_IdVenta" />
+          <ScalarProperty Name="PrecioVentaClienteSet_IdPrecioVcm" ColumnName="PrecioVentaClienteSet_IdPrecioVcm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaderasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.MaderasSet)">
+        <MappingFragment StoreEntitySet="MaderasSet">
+          <ScalarProperty Name="IdMadera" ColumnName="IdMadera" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="StockControl" ColumnName="StockControl" />
+          <ScalarProperty Name="FechaMovInventario" ColumnName="FechaMovInventario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioCompraProveedorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.PrecioCompraProveedorSet)">
+        <MappingFragment StoreEntitySet="PrecioCompraProveedorSet">
+          <ScalarProperty Name="IdPrecioCpm" ColumnName="IdPrecioCpm" />
+          <ScalarProperty Name="PrecioMadera" ColumnName="PrecioMadera" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Proveedores_IdProveedor" ColumnName="Proveedores_IdProveedor" />
+          <ScalarProperty Name="Maderas_IdMadera" ColumnName="Maderas_IdMadera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioVentaClienteSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.PrecioVentaClienteSet)">
+        <MappingFragment StoreEntitySet="PrecioVentaClienteSet">
+          <ScalarProperty Name="IdPrecioVcm" ColumnName="IdPrecioVcm" />
+          <ScalarProperty Name="PrecioMadera" ColumnName="PrecioMadera" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Clientes_IdCliente" ColumnName="Clientes_IdCliente" />
+          <ScalarProperty Name="Maderas_IdMadera" ColumnName="Maderas_IdMadera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProveedoresSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.ProveedoresSet)">
+        <MappingFragment StoreEntitySet="ProveedoresSet">
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="App" ColumnName="App" />
+          <ScalarProperty Name="Apm" ColumnName="Apm" />
+          <ScalarProperty Name="NumCel" ColumnName="NumCel" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="NumExt" ColumnName="NumExt" />
+          <ScalarProperty Name="NumInt" ColumnName="NumInt" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="NombreEmpresa" ColumnName="NombreEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroAbonoClientesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.RegistroAbonoClientesSet)">
+        <MappingFragment StoreEntitySet="RegistroAbonoClientesSet">
+          <ScalarProperty Name="IdAbono" ColumnName="IdAbono" />
+          <ScalarProperty Name="FechaAbono" ColumnName="FechaAbono" />
+          <ScalarProperty Name="Debia" ColumnName="Debia" />
+          <ScalarProperty Name="Abono" ColumnName="Abono" />
+          <ScalarProperty Name="Debe" ColumnName="Debe" />
+          <ScalarProperty Name="RecibeAbono" ColumnName="RecibeAbono" />
+          <ScalarProperty Name="Ventas_IdVenta" ColumnName="Ventas_IdVenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroAbonoProveedorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.RegistroAbonoProveedorSet)">
+        <MappingFragment StoreEntitySet="RegistroAbonoProveedorSet">
+          <ScalarProperty Name="IdAbono" ColumnName="IdAbono" />
+          <ScalarProperty Name="FechaAbono" ColumnName="FechaAbono" />
+          <ScalarProperty Name="Debia" ColumnName="Debia" />
+          <ScalarProperty Name="Abono" ColumnName="Abono" />
+          <ScalarProperty Name="Debe" ColumnName="Debe" />
+          <ScalarProperty Name="RecibeAbono" ColumnName="RecibeAbono" />
+          <ScalarProperty Name="Compras_IdCompra" ColumnName="Compras_IdCompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPagoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.TipoPagoSet)">
+        <MappingFragment StoreEntitySet="TipoPagoSet">
+          <ScalarProperty Name="IdTipoPago" ColumnName="IdTipoPago" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuariosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.UsuariosSet)">
+        <MappingFragment StoreEntitySet="UsuariosSet">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="App" ColumnName="App" />
+          <ScalarProperty Name="Apm" ColumnName="Apm" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VentasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDatosInventarioMaderaV8Model.VentasSet)">
+        <MappingFragment StoreEntitySet="VentasSet">
+          <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
+          <ScalarProperty Name="FechaVenta" ColumnName="FechaVenta" />
+          <ScalarProperty Name="TotalProducto" ColumnName="TotalProducto" />
+          <ScalarProperty Name="PrecioTotal" ColumnName="PrecioTotal" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="PagoCon" ColumnName="PagoCon" />
+          <ScalarProperty Name="Deuda" ColumnName="Deuda" />
+          <ScalarProperty Name="ClientesSet_IdCliente" ColumnName="ClientesSet_IdCliente" />
+          <ScalarProperty Name="TipoPagoSet_IdTipoPago" ColumnName="TipoPagoSet_IdTipoPago" />
+          <ScalarProperty Name="NombreEntrega" ColumnName="NombreEntrega" />
+          <ScalarProperty Name="NombreRecibe" ColumnName="NombreRecibe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

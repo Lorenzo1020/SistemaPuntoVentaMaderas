@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="442f6cb095b04e4a8d1f5097d6a9b00d" Name="Diagram1">
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.ClientesSet" PointX="3.75" PointY="14.375" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.ComprasSet" PointX="3" PointY="5.5" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.DetalleComprasSet" PointX="8.25" PointY="5.25" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.DetalleVentasSet" PointX="11.25" PointY="6.25" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.MaderasSet" PointX="3.75" PointY="1.125" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.PrecioCompraProveedorSet" PointX="6" PointY="1.25" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.PrecioVentaClienteSet" PointX="9" PointY="1.25" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.ProveedoresSet" PointX="0.75" PointY="1.375" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.RegistroAbonoClientesSet" PointX="8.25" PointY="9.375" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.RegistroAbonoProveedorSet" PointX="5.25" PointY="10.375" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.TipoPagoSet" PointX="0.75" PointY="6.5" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.UsuariosSet" PointX="0.75" PointY="10.75" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.VentasSet" PointX="6" PointY="5.5" Width="1.5" IsExpanded="true" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_ClientesPrecioVentaCliente" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_ClientesSetVentasSet" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_ComprasDetalleCompra" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_ComprasRegistroAbonoProveedor" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_ProveedoresCompras" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_TipoPagoCompras" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_PrecioCompraProveedorSetDetalleComprasSet" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_PrecioVentaClienteSetDetalleVentasSet" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_VentasDetalleVentas" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_MaderasPrecioCompraProveedor" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_MaderasSetPrecioVentaClienteSet" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_ProveedoresPrecioCompraProveedor" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_VentasRegistroAbonoClientes" />
+        <AssociationConnector ManuallyRouted="false" Association="BaseDatosInventarioMaderaV8Model.FK_TipoPagoSetVentasSet" />
+        <EntityTypeShape EntityType="BaseDatosInventarioMaderaV8Model.Entity1" Width="1.5" PointX="10.375" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

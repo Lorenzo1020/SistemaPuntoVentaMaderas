@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UsuariosSet" EntityType="Model1.Usuarios" />
+    <EntitySet Name="TipoPagoSet" EntityType="Model1.TipoPago" />
+    <EntitySet Name="ClientesSet" EntityType="Model1.Clientes" />
+    <EntitySet Name="ProveedoresSet" EntityType="Model1.Proveedores" />
+    <EntitySet Name="DireccionSet" EntityType="Model1.Direccion" />
+    <AssociationSet Name="DireccionClientes" Association="Model1.DireccionClientes">
+      <End Role="Direccion" EntitySet="DireccionSet" />
+      <End Role="Clientes" EntitySet="ClientesSet" />
+    </AssociationSet>
+    <AssociationSet Name="DireccionProveedores" Association="Model1.DireccionProveedores">
+      <End Role="Direccion" EntitySet="DireccionSet" />
+      <End Role="Proveedores" EntitySet="ProveedoresSet" />
+    </AssociationSet>
+    <EntitySet Name="MaderasSet" EntityType="Model1.Maderas" />
+    <EntitySet Name="PrecioVentaClienteSet" EntityType="Model1.PrecioVentaCliente" />
+    <AssociationSet Name="ClientesPrecioVentaCliente" Association="Model1.ClientesPrecioVentaCliente">
+      <End Role="Clientes" EntitySet="ClientesSet" />
+      <End Role="PrecioVentaCliente" EntitySet="PrecioVentaClienteSet" />
+    </AssociationSet>
+    <AssociationSet Name="MaderasPrecioVentaCliente" Association="Model1.MaderasPrecioVentaCliente">
+      <End Role="Maderas" EntitySet="MaderasSet" />
+      <End Role="PrecioVentaCliente" EntitySet="PrecioVentaClienteSet" />
+    </AssociationSet>
+    <EntitySet Name="VentasSet" EntityType="Model1.Ventas" />
+    <EntitySet Name="DetalleVentasSet" EntityType="Model1.DetalleVentas" />
+    <AssociationSet Name="VentasDetalleVentas" Association="Model1.VentasDetalleVentas">
+      <End Role="Ventas" EntitySet="VentasSet" />
+      <End Role="DetalleVentas" EntitySet="DetalleVentasSet" />
+    </AssociationSet>
+    <AssociationSet Name="MaderasDetalleVentas" Association="Model1.MaderasDetalleVentas">
+      <End Role="Maderas" EntitySet="MaderasSet" />
+      <End Role="DetalleVentas" EntitySet="DetalleVentasSet" />
+    </AssociationSet>
+    <AssociationSet Name="TipoPagoClienteVentas" Association="Model1.TipoPagoClienteVentas">
+      <End Role="TipoPagoCliente" EntitySet="TipoPagoSet" />
+      <End Role="Ventas" EntitySet="VentasSet" />
+    </AssociationSet>
+    <EntitySet Name="RegistroAbonoClientesSet" EntityType="Model1.RegistroAbonoClientes" />
+    <AssociationSet Name="VentasRegistroAbonoClientes" Association="Model1.VentasRegistroAbonoClientes">
+      <End Role="Ventas" EntitySet="VentasSet" />
+      <End Role="RegistroAbonoClientes" EntitySet="RegistroAbonoClientesSet" />
+    </AssociationSet>
+    <EntitySet Name="ComprasSet" EntityType="Model1.Compras" />
+    <AssociationSet Name="ProveedoresCompras" Association="Model1.ProveedoresCompras">
+      <End Role="Proveedores" EntitySet="ProveedoresSet" />
+      <End Role="Compras" EntitySet="ComprasSet" />
+    </AssociationSet>
+    <EntitySet Name="DetalleComprasSet" EntityType="Model1.DetalleCompras" />
+    <AssociationSet Name="ComprasDetalleCompra" Association="Model1.ComprasDetalleCompra">
+      <End Role="Compras" EntitySet="ComprasSet" />
+      <End Role="DetalleCompra" EntitySet="DetalleComprasSet" />
+    </AssociationSet>
+    <AssociationSet Name="MaderasDetalleCompras" Association="Model1.MaderasDetalleCompras">
+      <End Role="Maderas" EntitySet="MaderasSet" />
+      <End Role="DetalleCompras" EntitySet="DetalleComprasSet" />
+    </AssociationSet>
+    <EntitySet Name="PrecioCompraProveedorSet" EntityType="Model1.PrecioCompraProveedor" />
+    <AssociationSet Name="ProveedoresPrecioCompraProveedor" Association="Model1.ProveedoresPrecioCompraProveedor">
+      <End Role="Proveedores" EntitySet="ProveedoresSet" />
+      <End Role="PrecioCompraProveedor" EntitySet="PrecioCompraProveedorSet" />
+    </AssociationSet>
+    <AssociationSet Name="MaderasPrecioCompraProveedor" Association="Model1.MaderasPrecioCompraProveedor">
+      <End Role="Maderas" EntitySet="MaderasSet" />
+      <End Role="PrecioCompraProveedor" EntitySet="PrecioCompraProveedorSet" />
+    </AssociationSet>
+    <AssociationSet Name="TipoPagoCompras" Association="Model1.TipoPagoCompras">
+      <End Role="TipoPago" EntitySet="TipoPagoSet" />
+      <End Role="Compras" EntitySet="ComprasSet" />
+    </AssociationSet>
+    <EntitySet Name="RegistroAbonoProveedorSet" EntityType="Model1.RegistroAbonoProveedor" />
+    <AssociationSet Name="ComprasRegistroAbonoProveedor" Association="Model1.ComprasRegistroAbonoProveedor">
+      <End Role="Compras" EntitySet="ComprasSet" />
+      <End Role="RegistroAbonoProveedor" EntitySet="RegistroAbonoProveedorSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" />
+    <Property Name="App" Type="String" Nullable="false" />
+    <Property Name="Apm" Type="String" Nullable="false" />
+    <Property Name="Usuario" Type="String" Nullable="false" />
+    <Property Name="Contrasena" Type="String" Nullable="false" />
+    <Property Name="Estatus" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoPago">
+    <Key>
+      <PropertyRef Name="IdTipoPago" />
+    </Key>
+    <Property Name="IdTipoPago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" />
+    <Property Name="Estatus" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Ventas" Relationship="Model1.TipoPagoClienteVentas" FromRole="TipoPagoCliente" ToRole="Ventas" />
+    <NavigationProperty Name="Compras" Relationship="Model1.TipoPagoCompras" FromRole="TipoPago" ToRole="Compras" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" />
+    <Property Name="App" Type="String" Nullable="false" />
+    <Property Name="Apm" Type="String" Nullable="false" />
+    <Property Name="NumCel" Type="String" Nullable="false" />
+    <Property Name="Correo" Type="String" Nullable="false" />
+    <Property Name="FechaRegistro" Type="DateTime" Nullable="false" />
+    <Property Name="Estatus" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Direccion" Relationship="Model1.DireccionClientes" FromRole="Clientes" ToRole="Direccion" />
+    <NavigationProperty Name="PrecioVentaCliente" Relationship="Model1.ClientesPrecioVentaCliente" FromRole="Clientes" ToRole="PrecioVentaCliente" />
+  </EntityType>
+  <EntityType Name="Proveedores">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+    </Key>
+    <Property Name="IdProveedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" />
+    <Property Name="App" Type="String" Nullable="false" />
+    <Property Name="Apm" Type="String" Nullable="false" />
+    <Property Name="NumCel" Type="String" Nullable="false" />
+    <Property Name="Correo" Type="String" Nullable="false" />
+    <Property Name="FechaRegistro" Type="DateTime" Nullable="false" />
+    <Property Name="Estatus" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Direccion" Relationship="Model1.DireccionProveedores" FromRole="Proveedores" ToRole="Direccion" />
+    <NavigationProperty Name="Compras" Relationship="Model1.ProveedoresCompras" FromRole="Proveedores" ToRole="Compras" />
+    <NavigationProperty Name="PrecioCompraProveedor" Relationship="Model1.ProveedoresPrecioCompraProveedor" FromRole="Proveedores" ToRole="PrecioCompraProveedor" />
+  </EntityType>
+  <EntityType Name="Direccion">
+    <Key>
+      <PropertyRef Name="IdDireccion" />
+    </Key>
+    <Property Name="IdDireccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Calle" Type="String" Nullable="false" />
+    <Property Name="NumExt" Type="String" Nullable="false" />
+    <Property Name="NumInt" Type="String" Nullable="false" />
+    <Property Name="Cp" Type="Int64" Nullable="false" />
+    <Property Name="Estado" Type="String" Nullable="false" />
+    <Property Name="Ciudad" Type="String" Nullable="false" />
+    <NavigationProperty Name="Clientes" Relationship="Model1.DireccionClientes" FromRole="Direccion" ToRole="Clientes" />
+    <NavigationProperty Name="Proveedores" Relationship="Model1.DireccionProveedores" FromRole="Direccion" ToRole="Proveedores" />
+  </EntityType>
+  <Association Name="DireccionClientes">
+    <End Type="Model1.Direccion" Role="Direccion" Multiplicity="1" />
+    <End Type="Model1.Clientes" Role="Clientes" Multiplicity="1" />
+  </Association>
+  <Association Name="DireccionProveedores">
+    <End Type="Model1.Direccion" Role="Direccion" Multiplicity="1" />
+    <End Type="Model1.Proveedores" Role="Proveedores" Multiplicity="1" />
+  </Association>
+  <EntityType Name="Maderas">
+    <Key>
+      <PropertyRef Name="IdMadera" />
+    </Key>
+    <Property Name="IdMadera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" />
+    <Property Name="Estatus" Type="Int16" Nullable="false" />
+    <Property Name="Stock" Type="Int64" Nullable="false" />
+    <Property Name="StockControl" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="PrecioVentaCliente" Relationship="Model1.MaderasPrecioVentaCliente" FromRole="Maderas" ToRole="PrecioVentaCliente" />
+    <NavigationProperty Name="DetalleVentas" Relationship="Model1.MaderasDetalleVentas" FromRole="Maderas" ToRole="DetalleVentas" />
+    <NavigationProperty Name="DetalleCompras" Relationship="Model1.MaderasDetalleCompras" FromRole="Maderas" ToRole="DetalleCompras" />
+    <NavigationProperty Name="PrecioCompraProveedor" Relationship="Model1.MaderasPrecioCompraProveedor" FromRole="Maderas" ToRole="PrecioCompraProveedor" />
+  </EntityType>
+  <EntityType Name="PrecioVentaCliente">
+    <Key>
+      <PropertyRef Name="IdPrecioVcm" />
+    </Key>
+    <Property Name="IdPrecioVcm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PrecioMadera" Type="Double" Nullable="false" />
+    <Property Name="Estatus" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Clientes" Relationship="Model1.ClientesPrecioVentaCliente" FromRole="PrecioVentaCliente" ToRole="Clientes" />
+    <NavigationProperty Name="Maderas" Relationship="Model1.MaderasPrecioVentaCliente" FromRole="PrecioVentaCliente" ToRole="Maderas" />
+  </EntityType>
+  <Association Name="ClientesPrecioVentaCliente">
+    <End Type="Model1.Clientes" Role="Clientes" Multiplicity="1" />
+    <End Type="Model1.PrecioVentaCliente" Role="PrecioVentaCliente" Multiplicity="*" />
+  </Association>
+  <Association Name="MaderasPrecioVentaCliente">
+    <End Type="Model1.Maderas" Role="Maderas" Multiplicity="1" />
+    <End Type="Model1.PrecioVentaCliente" Role="PrecioVentaCliente" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Ventas">
+    <Key>
+      <PropertyRef Name="IdVenta" />
+    </Key>
+    <Property Name="IdVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaVenta" Type="DateTime" Nullable="false" />
+    <Property Name="TotalProducto" Type="Int64" Nullable="false" />
+    <Property Name="PrecioTotal" Type="Double" Nullable="false" />
+    <Property Name="FechaRegistro" Type="DateTime" Nullable="false" />
+    <Property Name="PagoCon" Type="Double" Nullable="false" />
+    <Property Name="Deuda" Type="Double" Nullable="false" />
+    <Property Name="RealizoVenta" Type="String" Nullable="false" />
+    <NavigationProperty Name="DetalleVentas" Relationship="Model1.VentasDetalleVentas" FromRole="Ventas" ToRole="DetalleVentas" />
+    <NavigationProperty Name="TipoPagoCliente" Relationship="Model1.TipoPagoClienteVentas" FromRole="Ventas" ToRole="TipoPagoCliente" />
+    <NavigationProperty Name="RegistroAbonoClientes" Relationship="Model1.VentasRegistroAbonoClientes" FromRole="Ventas" ToRole="RegistroAbonoClientes" />
+  </EntityType>
+  <EntityType Name="DetalleVentas">
+    <Key>
+      <PropertyRef Name="IdDetalleVenta" />
+    </Key>
+    <Property Name="IdDetalleVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cantidad" Type="Int64" Nullable="false" />
+    <Property Name="SubTotal" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Ventas" Relationship="Model1.VentasDetalleVentas" FromRole="DetalleVentas" ToRole="Ventas" />
+    <NavigationProperty Name="Maderas" Relationship="Model1.MaderasDetalleVentas" FromRole="DetalleVentas" ToRole="Maderas" />
+  </EntityType>
+  <Association Name="VentasDetalleVentas">
+    <End Type="Model1.Ventas" Role="Ventas" Multiplicity="1" />
+    <End Type="Model1.DetalleVentas" Role="DetalleVentas" Multiplicity="*" />
+  </Association>
+  <Association Name="MaderasDetalleVentas">
+    <End Type="Model1.Maderas" Role="Maderas" Multiplicity="1" />
+    <End Type="Model1.DetalleVentas" Role="DetalleVentas" Multiplicity="*" />
+  </Association>
+  <Association Name="TipoPagoClienteVentas">
+    <End Type="Model1.TipoPago" Role="TipoPagoCliente" Multiplicity="1" />
+    <End Type="Model1.Ventas" Role="Ventas" Multiplicity="*" />
+  </Association>
+  <EntityType Name="RegistroAbonoClientes">
+    <Key>
+      <PropertyRef Name="IdAbono" />
+    </Key>
+    <Property Name="IdAbono" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaAbono" Type="DateTime" Nullable="false" />
+    <Property Name="Debia" Type="Double" Nullable="false" />
+    <Property Name="Abono" Type="Double" Nullable="false" />
+    <Property Name="Debe" Type="Double" Nullable="false" />
+    <Property Name="RecibeAbono" Type="String" Nullable="false" />
+    <NavigationProperty Name="Ventas" Relationship="Model1.VentasRegistroAbonoClientes" FromRole="RegistroAbonoClientes" ToRole="Ventas" />
+  </EntityType>
+  <Association Name="VentasRegistroAbonoClientes">
+    <End Type="Model1.Ventas" Role="Ventas" Multiplicity="1" />
+    <End Type="Model1.RegistroAbonoClientes" Role="RegistroAbonoClientes" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Compras">
+    <Key>
+      <PropertyRef Name="IdCompra" />
+    </Key>
+    <Property Name="IdCompra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaCompra" Type="DateTime" Nullable="false" />
+    <Property Name="TotalProducto" Type="Int64" Nullable="false" />
+    <Property Name="PrecioTotal" Type="Double" Nullable="false" />
+    <Property Name="FechaRegistro" Type="Double" Nullable="false" />
+    <Property Name="PagoCon" Type="Double" Nullable="false" />
+    <Property Name="Deuda" Type="Double" Nullable="false" />
+    <Property Name="RealizoCompra" Type="String" Nullable="false" />
+    <NavigationProperty Name="Proveedores" Relationship="Model1.ProveedoresCompras" FromRole="Compras" ToRole="Proveedores" />
+    <NavigationProperty Name="DetalleCompra" Relationship="Model1.ComprasDetalleCompra" FromRole="Compras" ToRole="DetalleCompra" />
+    <NavigationProperty Name="TipoPago" Relationship="Model1.TipoPagoCompras" FromRole="Compras" ToRole="TipoPago" />
+    <NavigationProperty Name="RegistroAbonoProveedor" Relationship="Model1.ComprasRegistroAbonoProveedor" FromRole="Compras" ToRole="RegistroAbonoProveedor" />
+  </EntityType>
+  <Association Name="ProveedoresCompras">
+    <End Type="Model1.Proveedores" Role="Proveedores" Multiplicity="1" />
+    <End Type="Model1.Compras" Role="Compras" Multiplicity="*" />
+  </Association>
+  <EntityType Name="DetalleCompras">
+    <Key>
+      <PropertyRef Name="IdDetalleCompra" />
+    </Key>
+    <Property Name="IdDetalleCompra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cantidad" Type="Int64" Nullable="false" />
+    <Property Name="Subtotal" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Compras" Relationship="Model1.ComprasDetalleCompra" FromRole="DetalleCompra" ToRole="Compras" />
+    <NavigationProperty Name="Maderas" Relationship="Model1.MaderasDetalleCompras" FromRole="DetalleCompras" ToRole="Maderas" />
+  </EntityType>
+  <Association Name="ComprasDetalleCompra">
+    <End Type="Model1.Compras" Role="Compras" Multiplicity="1" />
+    <End Type="Model1.DetalleCompras" Role="DetalleCompra" Multiplicity="*" />
+  </Association>
+  <Association Name="MaderasDetalleCompras">
+    <End Type="Model1.Maderas" Role="Maderas" Multiplicity="1" />
+    <End Type="Model1.DetalleCompras" Role="DetalleCompras" Multiplicity="*" />
+  </Association>
+  <EntityType Name="PrecioCompraProveedor">
+    <Key>
+      <PropertyRef Name="IdPrecioCp" />
+    </Key>
+    <Property Name="IdPrecioCp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PrecioMadera" Type="Double" Nullable="false" />
+    <Property Name="Estatus" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Proveedores" Relationship="Model1.ProveedoresPrecioCompraProveedor" FromRole="PrecioCompraProveedor" ToRole="Proveedores" />
+    <NavigationProperty Name="Maderas" Relationship="Model1.MaderasPrecioCompraProveedor" FromRole="PrecioCompraProveedor" ToRole="Maderas" />
+  </EntityType>
+  <Association Name="ProveedoresPrecioCompraProveedor">
+    <End Type="Model1.Proveedores" Role="Proveedores" Multiplicity="1" />
+    <End Type="Model1.PrecioCompraProveedor" Role="PrecioCompraProveedor" Multiplicity="*" />
+  </Association>
+  <Association Name="MaderasPrecioCompraProveedor">
+    <End Type="Model1.Maderas" Role="Maderas" Multiplicity="1" />
+    <End Type="Model1.PrecioCompraProveedor" Role="PrecioCompraProveedor" Multiplicity="*" />
+  </Association>
+  <Association Name="TipoPagoCompras">
+    <End Type="Model1.TipoPago" Role="TipoPago" Multiplicity="1" />
+    <End Type="Model1.Compras" Role="Compras" Multiplicity="*" />
+  </Association>
+  <EntityType Name="RegistroAbonoProveedor">
+    <Key>
+      <PropertyRef Name="IdAbono" />
+    </Key>
+    <Property Name="IdAbono" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaAbono" Type="DateTime" Nullable="false" />
+    <Property Name="Debia" Type="Double" Nullable="false" />
+    <Property Name="Abono" Type="Double" Nullable="false" />
+    <Property Name="Debe" Type="Double" Nullable="false" />
+    <Property Name="RecibeAbono" Type="String" Nullable="false" />
+    <NavigationProperty Name="Compras" Relationship="Model1.ComprasRegistroAbonoProveedor" FromRole="RegistroAbonoProveedor" ToRole="Compras" />
+  </EntityType>
+  <Association Name="ComprasRegistroAbonoProveedor">
+    <End Type="Model1.Compras" Role="Compras" Multiplicity="1" />
+    <End Type="Model1.RegistroAbonoProveedor" Role="RegistroAbonoProveedor" Multiplicity="*" />
+  </Association>
+</Schema>
