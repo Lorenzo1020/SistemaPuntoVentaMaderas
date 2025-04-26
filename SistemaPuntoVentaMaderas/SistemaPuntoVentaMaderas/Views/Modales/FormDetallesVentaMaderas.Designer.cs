@@ -29,14 +29,14 @@ namespace SistemaPuntoVentaMaderas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle129 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle130 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle131 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle132 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle133 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle134 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle135 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle136 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridDetalleVentaMaderas = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,14 +46,15 @@ namespace SistemaPuntoVentaMaderas
             this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelCliente = new System.Windows.Forms.Label();
             this.comboBoxTipoPago = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTipoPago = new System.Windows.Forms.Label();
             this.btnAlta = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxTotal = new System.Windows.Forms.TextBox();
+            this.textBoxPrecioTotal = new System.Windows.Forms.TextBox();
             this.dateTimeFechaVenta = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelFechaVenta = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxRealizaVenta = new System.Windows.Forms.TextBox();
@@ -69,7 +70,7 @@ namespace SistemaPuntoVentaMaderas
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxCantidadTotal = new System.Windows.Forms.TextBox();
             this.textBoxCantidad = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelCantidadVender = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleVentaMaderas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListaMaderasAvenXcliente)).BeginInit();
             this.SuspendLayout();
@@ -81,14 +82,14 @@ namespace SistemaPuntoVentaMaderas
             this.dataGridDetalleVentaMaderas.AllowUserToOrderColumns = true;
             this.dataGridDetalleVentaMaderas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridDetalleVentaMaderas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            dataGridViewCellStyle129.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle129.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle129.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle129.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            dataGridViewCellStyle129.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle129.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle129.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDetalleVentaMaderas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle129;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDetalleVentaMaderas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridDetalleVentaMaderas.ColumnHeadersHeight = 60;
             this.dataGridDetalleVentaMaderas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -98,34 +99,35 @@ namespace SistemaPuntoVentaMaderas
             this.cantidad,
             this.subTotal,
             this.btnQuitar,
-            this.Column3});
-            dataGridViewCellStyle130.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle130.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle130.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle130.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle130.SelectionBackColor = System.Drawing.Color.Aqua;
-            dataGridViewCellStyle130.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle130.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridDetalleVentaMaderas.DefaultCellStyle = dataGridViewCellStyle130;
+            this.Column3,
+            this.Column4});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Aqua;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridDetalleVentaMaderas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridDetalleVentaMaderas.EnableHeadersVisualStyles = false;
             this.dataGridDetalleVentaMaderas.Location = new System.Drawing.Point(420, 177);
             this.dataGridDetalleVentaMaderas.Name = "dataGridDetalleVentaMaderas";
             this.dataGridDetalleVentaMaderas.ReadOnly = true;
-            dataGridViewCellStyle131.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle131.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle131.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle131.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            dataGridViewCellStyle131.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle131.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle131.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDetalleVentaMaderas.RowHeadersDefaultCellStyle = dataGridViewCellStyle131;
-            dataGridViewCellStyle132.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle132.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(178)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle132.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle132.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle132.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(178)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle132.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(25)))));
-            this.dataGridDetalleVentaMaderas.RowsDefaultCellStyle = dataGridViewCellStyle132;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDetalleVentaMaderas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(178)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(178)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(25)))));
+            this.dataGridDetalleVentaMaderas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridDetalleVentaMaderas.RowTemplate.Height = 28;
             this.dataGridDetalleVentaMaderas.Size = new System.Drawing.Size(808, 359);
             this.dataGridDetalleVentaMaderas.TabIndex = 253;
@@ -180,17 +182,23 @@ namespace SistemaPuntoVentaMaderas
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
-            // label4
+            // Column4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(35, 36);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(181, 23);
-            this.label4.TabIndex = 255;
-            this.label4.Text = "Seleccione cliente";
+            this.Column4.HeaderText = "idDetalleVenta";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // labelCliente
+            // 
+            this.labelCliente.AutoSize = true;
+            this.labelCliente.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCliente.ForeColor = System.Drawing.Color.Black;
+            this.labelCliente.Location = new System.Drawing.Point(35, 36);
+            this.labelCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCliente.Name = "labelCliente";
+            this.labelCliente.Size = new System.Drawing.Size(181, 23);
+            this.labelCliente.TabIndex = 255;
+            this.labelCliente.Text = "Seleccione cliente";
             // 
             // comboBoxTipoPago
             // 
@@ -203,17 +211,17 @@ namespace SistemaPuntoVentaMaderas
             this.comboBoxTipoPago.Size = new System.Drawing.Size(236, 31);
             this.comboBoxTipoPago.TabIndex = 258;
             // 
-            // label1
+            // labelTipoPago
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(699, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 23);
-            this.label1.TabIndex = 257;
-            this.label1.Text = "Seleccione tipo de pago";
+            this.labelTipoPago.AutoSize = true;
+            this.labelTipoPago.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTipoPago.ForeColor = System.Drawing.Color.Black;
+            this.labelTipoPago.Location = new System.Drawing.Point(699, 36);
+            this.labelTipoPago.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTipoPago.Name = "labelTipoPago";
+            this.labelTipoPago.Size = new System.Drawing.Size(240, 23);
+            this.labelTipoPago.TabIndex = 257;
+            this.labelTipoPago.Text = "Seleccione tipo de pago";
             // 
             // btnAlta
             // 
@@ -244,15 +252,15 @@ namespace SistemaPuntoVentaMaderas
             this.label3.TabIndex = 262;
             this.label3.Text = "TOTAL DE PAGO $";
             // 
-            // textBoxTotal
+            // textBoxPrecioTotal
             // 
-            this.textBoxTotal.Enabled = false;
-            this.textBoxTotal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTotal.Location = new System.Drawing.Point(626, 590);
-            this.textBoxTotal.Name = "textBoxTotal";
-            this.textBoxTotal.Size = new System.Drawing.Size(197, 31);
-            this.textBoxTotal.TabIndex = 263;
-            this.textBoxTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPrecioTotal.Enabled = false;
+            this.textBoxPrecioTotal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPrecioTotal.Location = new System.Drawing.Point(626, 590);
+            this.textBoxPrecioTotal.Name = "textBoxPrecioTotal";
+            this.textBoxPrecioTotal.Size = new System.Drawing.Size(197, 31);
+            this.textBoxPrecioTotal.TabIndex = 263;
+            this.textBoxPrecioTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dateTimeFechaVenta
             // 
@@ -263,17 +271,17 @@ namespace SistemaPuntoVentaMaderas
             this.dateTimeFechaVenta.Size = new System.Drawing.Size(236, 26);
             this.dateTimeFechaVenta.TabIndex = 264;
             // 
-            // label6
+            // labelFechaVenta
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(784, 111);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 23);
-            this.label6.TabIndex = 267;
-            this.label6.Text = "Fecha de venta";
+            this.labelFechaVenta.AutoSize = true;
+            this.labelFechaVenta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFechaVenta.ForeColor = System.Drawing.Color.Black;
+            this.labelFechaVenta.Location = new System.Drawing.Point(784, 111);
+            this.labelFechaVenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelFechaVenta.Name = "labelFechaVenta";
+            this.labelFechaVenta.Size = new System.Drawing.Size(155, 23);
+            this.labelFechaVenta.TabIndex = 267;
+            this.labelFechaVenta.Text = "Fecha de venta";
             // 
             // label7
             // 
@@ -353,46 +361,46 @@ namespace SistemaPuntoVentaMaderas
             this.dataGridListaMaderasAvenXcliente.AllowUserToOrderColumns = true;
             this.dataGridListaMaderasAvenXcliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridListaMaderasAvenXcliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            dataGridViewCellStyle133.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle133.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle133.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle133.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            dataGridViewCellStyle133.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle133.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle133.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridListaMaderasAvenXcliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle133;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridListaMaderasAvenXcliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridListaMaderasAvenXcliente.ColumnHeadersHeight = 60;
             this.dataGridListaMaderasAvenXcliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
             this.Column2,
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle134.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle134.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle134.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle134.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle134.SelectionBackColor = System.Drawing.Color.Aqua;
-            dataGridViewCellStyle134.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle134.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridListaMaderasAvenXcliente.DefaultCellStyle = dataGridViewCellStyle134;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Aqua;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridListaMaderasAvenXcliente.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridListaMaderasAvenXcliente.EnableHeadersVisualStyles = false;
             this.dataGridListaMaderasAvenXcliente.Location = new System.Drawing.Point(12, 177);
             this.dataGridListaMaderasAvenXcliente.Name = "dataGridListaMaderasAvenXcliente";
             this.dataGridListaMaderasAvenXcliente.ReadOnly = true;
-            dataGridViewCellStyle135.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle135.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle135.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle135.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            dataGridViewCellStyle135.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle135.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle135.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridListaMaderasAvenXcliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle135;
-            dataGridViewCellStyle136.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle136.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(178)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle136.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle136.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle136.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(178)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle136.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(25)))));
-            this.dataGridListaMaderasAvenXcliente.RowsDefaultCellStyle = dataGridViewCellStyle136;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridListaMaderasAvenXcliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(178)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(178)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(25)))));
+            this.dataGridListaMaderasAvenXcliente.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridListaMaderasAvenXcliente.RowTemplate.Height = 28;
             this.dataGridListaMaderasAvenXcliente.Size = new System.Drawing.Size(393, 359);
             this.dataGridListaMaderasAvenXcliente.TabIndex = 275;
@@ -467,25 +475,26 @@ namespace SistemaPuntoVentaMaderas
             this.textBoxCantidad.Size = new System.Drawing.Size(197, 31);
             this.textBoxCantidad.TabIndex = 280;
             this.textBoxCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCantidad_KeyPress);
             // 
-            // label9
+            // labelCantidadVender
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(267, 111);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(187, 23);
-            this.label9.TabIndex = 281;
-            this.label9.Text = "Cantidad a vender";
+            this.labelCantidadVender.AutoSize = true;
+            this.labelCantidadVender.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCantidadVender.ForeColor = System.Drawing.Color.Black;
+            this.labelCantidadVender.Location = new System.Drawing.Point(267, 111);
+            this.labelCantidadVender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCantidadVender.Name = "labelCantidadVender";
+            this.labelCantidadVender.Size = new System.Drawing.Size(187, 23);
+            this.labelCantidadVender.TabIndex = 281;
+            this.labelCantidadVender.Text = "Cantidad a vender";
             // 
             // FormDetallesVentaMaderas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 650);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.labelCantidadVender);
             this.Controls.Add(this.textBoxCantidad);
             this.Controls.Add(this.textBoxRecibe);
             this.Controls.Add(this.label2);
@@ -496,16 +505,16 @@ namespace SistemaPuntoVentaMaderas
             this.Controls.Add(this.textBoxRealizaVenta);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelFechaVenta);
             this.Controls.Add(this.textBoxCantidadTotal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dateTimeFechaVenta);
-            this.Controls.Add(this.textBoxTotal);
+            this.Controls.Add(this.textBoxPrecioTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.comboBoxTipoPago);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelTipoPago);
+            this.Controls.Add(this.labelCliente);
             this.Controls.Add(this.dataGridDetalleVentaMaderas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormDetallesVentaMaderas";
@@ -518,14 +527,14 @@ namespace SistemaPuntoVentaMaderas
         }
 
         #endregion
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelCliente;
         private System.Windows.Forms.ComboBox comboBoxTipoPago;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTipoPago;
         public System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxTotal;
+        private System.Windows.Forms.TextBox textBoxPrecioTotal;
         private System.Windows.Forms.DateTimePicker dateTimeFechaVenta;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelFechaVenta;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxRealizaVenta;
@@ -541,7 +550,7 @@ namespace SistemaPuntoVentaMaderas
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxCantidadTotal;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelCantidadVender;
         public System.Windows.Forms.TextBox textBoxCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -551,5 +560,6 @@ namespace SistemaPuntoVentaMaderas
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
         private System.Windows.Forms.DataGridViewButtonColumn btnQuitar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

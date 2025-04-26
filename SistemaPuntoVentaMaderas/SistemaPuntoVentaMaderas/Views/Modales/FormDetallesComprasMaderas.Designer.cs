@@ -37,7 +37,7 @@ namespace SistemaPuntoVentaMaderas
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelCantidadComprar = new System.Windows.Forms.Label();
             this.textBoxCantidad = new System.Windows.Forms.TextBox();
             this.textBoxRecibe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,16 +51,16 @@ namespace SistemaPuntoVentaMaderas
             this.textBoxRealizaCompra = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelFechaCompra = new System.Windows.Forms.Label();
             this.textBoxCantidadTotal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimeFechaCompra = new System.Windows.Forms.DateTimePicker();
-            this.textBoxTotal = new System.Windows.Forms.TextBox();
+            this.textBoxPrecioTotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAlta = new System.Windows.Forms.Button();
             this.comboBoxTipoPago = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelTipoPago = new System.Windows.Forms.Label();
+            this.labelProveedor = new System.Windows.Forms.Label();
             this.dataGridDetalleComprasMaderas = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,21 +70,22 @@ namespace SistemaPuntoVentaMaderas
             this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListaMaderasAComprarXproved)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleComprasMaderas)).BeginInit();
             this.SuspendLayout();
             // 
-            // label9
+            // labelCantidadComprar
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(271, 117);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(202, 23);
-            this.label9.TabIndex = 303;
-            this.label9.Text = "Cantidad a comprar";
+            this.labelCantidadComprar.AutoSize = true;
+            this.labelCantidadComprar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCantidadComprar.ForeColor = System.Drawing.Color.Black;
+            this.labelCantidadComprar.Location = new System.Drawing.Point(271, 117);
+            this.labelCantidadComprar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCantidadComprar.Name = "labelCantidadComprar";
+            this.labelCantidadComprar.Size = new System.Drawing.Size(202, 23);
+            this.labelCantidadComprar.TabIndex = 303;
+            this.labelCantidadComprar.Text = "Cantidad a comprar";
             // 
             // textBoxCantidad
             // 
@@ -94,6 +95,7 @@ namespace SistemaPuntoVentaMaderas
             this.textBoxCantidad.Size = new System.Drawing.Size(173, 31);
             this.textBoxCantidad.TabIndex = 302;
             this.textBoxCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCantidad_KeyPress);
             // 
             // textBoxRecibe
             // 
@@ -258,17 +260,17 @@ namespace SistemaPuntoVentaMaderas
             this.label7.TabIndex = 293;
             this.label7.Text = "PAGO CON $";
             // 
-            // label6
+            // labelFechaCompra
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(762, 116);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 23);
-            this.label6.TabIndex = 292;
-            this.label6.Text = "Fecha de compra";
+            this.labelFechaCompra.AutoSize = true;
+            this.labelFechaCompra.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFechaCompra.ForeColor = System.Drawing.Color.Black;
+            this.labelFechaCompra.Location = new System.Drawing.Point(762, 116);
+            this.labelFechaCompra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelFechaCompra.Name = "labelFechaCompra";
+            this.labelFechaCompra.Size = new System.Drawing.Size(176, 23);
+            this.labelFechaCompra.TabIndex = 292;
+            this.labelFechaCompra.Text = "Fecha de compra";
             // 
             // textBoxCantidadTotal
             // 
@@ -301,15 +303,15 @@ namespace SistemaPuntoVentaMaderas
             this.dateTimeFechaCompra.Size = new System.Drawing.Size(236, 26);
             this.dateTimeFechaCompra.TabIndex = 289;
             // 
-            // textBoxTotal
+            // textBoxPrecioTotal
             // 
-            this.textBoxTotal.Enabled = false;
-            this.textBoxTotal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTotal.Location = new System.Drawing.Point(626, 590);
-            this.textBoxTotal.Name = "textBoxTotal";
-            this.textBoxTotal.Size = new System.Drawing.Size(197, 31);
-            this.textBoxTotal.TabIndex = 288;
-            this.textBoxTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPrecioTotal.Enabled = false;
+            this.textBoxPrecioTotal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPrecioTotal.Location = new System.Drawing.Point(626, 590);
+            this.textBoxPrecioTotal.Name = "textBoxPrecioTotal";
+            this.textBoxPrecioTotal.Size = new System.Drawing.Size(197, 31);
+            this.textBoxPrecioTotal.TabIndex = 288;
+            this.textBoxPrecioTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -331,10 +333,10 @@ namespace SistemaPuntoVentaMaderas
             this.btnAlta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlta.ForeColor = System.Drawing.Color.White;
             this.btnAlta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlta.Location = new System.Drawing.Point(1073, 566);
+            this.btnAlta.Location = new System.Drawing.Point(1073, 556);
             this.btnAlta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(154, 47);
+            this.btnAlta.Size = new System.Drawing.Size(154, 57);
             this.btnAlta.TabIndex = 286;
             this.btnAlta.Text = "Realizar compra";
             this.btnAlta.UseVisualStyleBackColor = false;
@@ -351,29 +353,29 @@ namespace SistemaPuntoVentaMaderas
             this.comboBoxTipoPago.Size = new System.Drawing.Size(236, 31);
             this.comboBoxTipoPago.TabIndex = 285;
             // 
-            // label1
+            // labelTipoPago
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(701, 42);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 23);
-            this.label1.TabIndex = 284;
-            this.label1.Text = "Seleccione tipo de pago";
+            this.labelTipoPago.AutoSize = true;
+            this.labelTipoPago.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTipoPago.ForeColor = System.Drawing.Color.Black;
+            this.labelTipoPago.Location = new System.Drawing.Point(701, 42);
+            this.labelTipoPago.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTipoPago.Name = "labelTipoPago";
+            this.labelTipoPago.Size = new System.Drawing.Size(240, 23);
+            this.labelTipoPago.TabIndex = 284;
+            this.labelTipoPago.Text = "Seleccione tipo de pago";
             // 
-            // label4
+            // labelProveedor
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(37, 42);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 23);
-            this.label4.TabIndex = 283;
-            this.label4.Text = "Seleccione proveedor";
+            this.labelProveedor.AutoSize = true;
+            this.labelProveedor.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProveedor.ForeColor = System.Drawing.Color.Black;
+            this.labelProveedor.Location = new System.Drawing.Point(37, 42);
+            this.labelProveedor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelProveedor.Name = "labelProveedor";
+            this.labelProveedor.Size = new System.Drawing.Size(215, 23);
+            this.labelProveedor.TabIndex = 283;
+            this.labelProveedor.Text = "Seleccione proveedor";
             // 
             // dataGridDetalleComprasMaderas
             // 
@@ -399,7 +401,8 @@ namespace SistemaPuntoVentaMaderas
             this.cantidad,
             this.subTotal,
             this.btnQuitar,
-            this.Column3});
+            this.Column3,
+            this.Column4});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -481,12 +484,18 @@ namespace SistemaPuntoVentaMaderas
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "idDetCompra";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // FormDetallesComprasMaderas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 650);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.labelCantidadComprar);
             this.Controls.Add(this.textBoxCantidad);
             this.Controls.Add(this.textBoxRecibe);
             this.Controls.Add(this.label2);
@@ -497,16 +506,16 @@ namespace SistemaPuntoVentaMaderas
             this.Controls.Add(this.textBoxRealizaCompra);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelFechaCompra);
             this.Controls.Add(this.textBoxCantidadTotal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dateTimeFechaCompra);
-            this.Controls.Add(this.textBoxTotal);
+            this.Controls.Add(this.textBoxPrecioTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.comboBoxTipoPago);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelTipoPago);
+            this.Controls.Add(this.labelProveedor);
             this.Controls.Add(this.dataGridDetalleComprasMaderas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormDetallesComprasMaderas";
@@ -520,7 +529,7 @@ namespace SistemaPuntoVentaMaderas
 
         #endregion
 
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelCantidadComprar;
         public System.Windows.Forms.TextBox textBoxCantidad;
         private System.Windows.Forms.TextBox textBoxRecibe;
         private System.Windows.Forms.Label label2;
@@ -534,16 +543,16 @@ namespace SistemaPuntoVentaMaderas
         private System.Windows.Forms.TextBox textBoxRealizaCompra;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelFechaCompra;
         private System.Windows.Forms.TextBox textBoxCantidadTotal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimeFechaCompra;
-        private System.Windows.Forms.TextBox textBoxTotal;
+        private System.Windows.Forms.TextBox textBoxPrecioTotal;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.ComboBox comboBoxTipoPago;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelTipoPago;
+        private System.Windows.Forms.Label labelProveedor;
         private System.Windows.Forms.DataGridView dataGridDetalleComprasMaderas;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -553,5 +562,6 @@ namespace SistemaPuntoVentaMaderas
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
         private System.Windows.Forms.DataGridViewButtonColumn btnQuitar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

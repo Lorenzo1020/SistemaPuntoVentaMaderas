@@ -91,5 +91,24 @@ namespace SistemaPuntoVentaMaderas
                 }
             }
         }
+
+        private void buttonCancelarVenta_Click(object sender, EventArgs e)
+        {
+            if (dataGridVentaMaderas.Rows.Count > 0)
+            {
+                //obtenemos el id de la compra con el doble click en el datagrid---para empezar la cancelacion de la compra
+                int idVenta = Convert.ToInt32(this.dataGridVentaMaderas.CurrentRow.Cells[0].Value);
+
+                FormDetallesVentaMaderas formDetallesVenta = new FormDetallesVentaMaderas(true, idVenta);
+                formDetallesVenta.ShowDialog();
+                mostrarVentasMaderas();
+
+                txbCliente.Focus();
+                txbCliente.Text = "";
+                lbrespuesta.Text = "";
+            }
+            else
+                MessageBox.Show("No hay ventas para poder cancelar", " ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
     }
 }

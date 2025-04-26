@@ -21,6 +21,7 @@ namespace SistemaPuntoVentaMaderas
         {
             InitializeComponent();
             dataGridComprasMaderas.Columns[0].Visible = false;
+            dataGridComprasMaderas.Columns[1].Width = 200;
 
             mostrarComprasMaderas();
 
@@ -91,6 +92,26 @@ namespace SistemaPuntoVentaMaderas
                     lbrespuesta.Text = "";
                 }
             }
+        }
+
+        private void buttonCancelarCompra_Click(object sender, EventArgs e)
+        {
+            if (dataGridComprasMaderas.Rows.Count > 0)
+            {
+                //obtenemos el id de la compra con el doble click en el datagrid---para empezar la cancelacion de la compra
+                int idCompra = Convert.ToInt32(this.dataGridComprasMaderas.CurrentRow.Cells[0].Value);
+
+                FormDetallesComprasMaderas formDetallesCompras = new FormDetallesComprasMaderas(true, idCompra);
+                formDetallesCompras.ShowDialog();
+                mostrarComprasMaderas();
+
+                txbProvedor.Focus();
+                txbProvedor.Text = "";
+                lbrespuesta.Text = "";
+            }
+            else
+            MessageBox.Show("No hay compras para poder cancelar", " ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
         }
     }
 }
